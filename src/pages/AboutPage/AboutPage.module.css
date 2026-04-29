@@ -1,0 +1,603 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* ── Main section ── */
+.section {
+  padding: 140px 0 80px;
+}
+
+@keyframes aboutSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Two-column grid */
+.contentGrid {
+  max-width: 1216px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* ── Left card ── */
+.leftCard {
+  width: 522px;
+  flex-shrink: 0;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  animation: aboutSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.cardInner {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: 36px;
+  font-weight: var(--font-weight-medium);
+  line-height: 44px;
+  letter-spacing: -0.72px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.textSections {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.lastSection {
+  padding-bottom: 0;
+}
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  line-height: 12px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+}
+
+.bodyText {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 24px;
+  color: #414651;
+  margin: 0;
+}
+.bodyText + .bodyText { margin-top: 12px; }
+.bodyText strong { font-weight: var(--font-weight-semibold); color: #414651; }
+.bodyLink {
+  font-weight: var(--font-weight-semibold);
+  color: #414651;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(65, 70, 81, 0.4);
+  transition: text-decoration-color 0.15s ease;
+}
+.bodyLink:hover { text-decoration-color: #414651; }
+
+/* ── Right cards column ── */
+.rightCards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: aboutSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+}
+
+.cardsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+/* ── Photos card ── */
+.photosCard {
+  flex: 1;
+  height: 334px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+  cursor: pointer;
+  transform: translateZ(0); /* fuerza GPU layer, evita sub-pixel gap en border-radius */
+  -webkit-transform: translateZ(0);
+}
+
+/* Two-layer dissolve: back stays at full opacity, front fades in on top */
+.photosImgBack {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  bottom: -2px;
+  width: 100%;
+  height: calc(100% + 2px);
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+
+.photosImgFront {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  bottom: -2px;
+  width: 100%;
+  height: calc(100% + 2px);
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  opacity: 0;
+  /* No transition here — reset to invisible is instant (no fade-out artifact) */
+}
+
+.photosImgFrontVisible {
+  opacity: 1;
+  /* Transition lives only here — fade-in fires when this class is added */
+  transition: opacity 0.9s ease;
+}
+
+.photosLogo {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.photosLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dots indicator */
+.photosDots {
+  position: absolute;
+  bottom: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  z-index: 2;
+}
+
+.photosDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.photosDotActive {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.25);
+}
+
+/* Glass nav pill — Figma: BACKGROUND_BLUR 6.23px, fill rgba(235,235,235,0.10),
+   cornerRadius 51.94px. Border is a white overlay glow, not a CSS border. */
+.photosNav {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 50px;
+  border-radius: 52px;
+  z-index: 2;
+  background: rgba(235, 235, 235, 0.10);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  /* White inner glow simulates the Figma "Bordo glow" overlay effect */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.photosNavBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.18s ease;
+  flex-shrink: 0;
+}
+
+.photosNavBtnActive {
+  opacity: 1;
+}
+
+/* ── Music card ── */
+.musicCard {
+  flex: 1;
+  height: 334px;
+  background: linear-gradient(180deg, #FB5D74 0%, #F9233D 100%);
+  border-radius: 24px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  overflow: hidden;
+}
+
+.musicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6px;
+  flex-shrink: 0;
+}
+
+.musicHeaderTitle {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.29px;
+}
+
+.musicAppleIcon {
+  width: 16px;
+  height: 21px;
+  display: block;
+}
+
+/* Track row */
+.musicTrack {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.trackCover {
+  width: 63px;
+  height: 63px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.trackInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.trackTitle {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trackSub {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: #FCCAE3;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackPlayBtn {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  padding-left: 2px; /* optical center the play triangle */
+  transition: background 0.15s ease;
+}
+
+.trackPlayBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.trackPlayBtnActive {
+  background: rgba(255, 255, 255, 0.30);
+}
+
+/* ── Chat card ── */
+.chatCard {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 25px;
+  padding: 24px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+.chatDate {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-regular);
+  color: #8E8E93;
+  text-align: center;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.chatSent {
+  align-self: flex-end;
+  max-width: 72%;
+  background: #448AF7;
+  border-radius: 18px 18px 4px 18px;
+  padding: 10px 16px;
+}
+
+.chatSent p {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: var(--font-weight-regular);
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 22px;
+}
+
+.chatRead {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-regular);
+  color: #8E8E93;
+  align-self: flex-end;
+  padding-right: 4px;
+  margin-top: 2px;
+}
+
+.chatReceivedRow {
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 80%;
+  margin-top: 6px;
+}
+
+.chatAvatar {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.chatReceived {
+  background: #E9E9EB;
+  border-radius: 18px 18px 18px 4px;
+  padding: 10px 16px;
+}
+
+.chatReceived p {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: var(--font-weight-regular);
+  color: #1C1C1E;
+  margin: 0;
+  line-height: 20px;
+}
+
+/* ── Behance fanned card ── */
+.behanceCard {
+  display: block;
+  width: 100%;
+  aspect-ratio: 678 / 331;   /* height scales with container width */
+  background: #FAFAFA;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.behanceLogo {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  width: 53px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.behanceLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fluid sizing: 287/678 = 42.33% wide, aspect-ratio keeps height proportional */
+.behanceFanCard {
+  position: absolute;
+  width: 42.33%;              /* 287 ÷ 678 */
+  aspect-ratio: 287 / 220;
+  border-radius: 8.36%;       /* 24 ÷ 287 — scales with card */
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+/* Inner stroke overlay (Figma "Stroke" child div) */
+.behanceFanCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8.36%;       /* matches parent card radius */
+  border: 1.3px solid rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hiedra card uses #dcdcdc stroke instead of white */
+.behanceFanCard3::after {
+  border-color: #dcdcdc;
+}
+
+.behanceFanCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Default state — Figma 453-7360
+   left% = px ÷ 678   top% = px ÷ 331   (fluid, works at any container size) */
+.behanceFanCard1 { left: 10.62%; top: 32.93%; transform: rotate(-20deg); }
+.behanceFanCard2 { left: 26.99%; top: 37.46%; transform: rotate(-12deg); }
+.behanceFanCard3 { left: 49.12%; top: 38.37%; transform: rotate(-2deg);  }
+
+/* Hover state — Figma 453-7362 (same centres, different rotations) */
+.behanceCard:hover .behanceFanCard1 { transform: rotate(-16.47deg); }
+.behanceCard:hover .behanceFanCard2 { transform: rotate(-7.08deg);  }
+.behanceCard:hover .behanceFanCard3 { transform: rotate(-7.6deg);   }
+
+/* ── Tablet ── */
+@media (max-width: 1100px) {
+  .contentGrid {
+    padding: 0 24px;
+    max-width: 100%;
+  }
+
+  .leftCard {
+    width: 420px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .section {
+    padding: 90px 0 48px;
+  }
+
+  .contentGrid {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .leftCard {
+    width: 100%;
+  }
+
+  .rightCards {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cardsRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Photos card — flex: none saca el flex-basis:0% que colapsaba la altura */
+  .photosCard {
+    flex: none;
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+  }
+
+  .photosNav {
+    width: calc(100% - 32px);
+    max-width: 280px;
+  }
+
+  /* Music card */
+  .musicCard {
+    flex: none;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  /* Chat card */
+  .chatCard {
+    border-radius: 20px;
+  }
+
+  /* Behance card */
+  .behanceCard {
+    border-radius: 20px;
+  }
+}
+
+/* ── Small phones ── */
+@media (max-width: 390px) {
+  .contentGrid {
+    padding: 0 12px;
+  }
+
+  .photosCard {
+    height: 340px;
+  }
+
+  .photosNav {
+    width: calc(100% - 24px);
+  }
+
+}

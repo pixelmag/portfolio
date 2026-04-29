@@ -1,0 +1,614 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--space-lg);
+  font-family: var(--font-family);
+  color: var(--color-text-secondary);
+}
+
+@keyframes caseSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero section ── */
+.heroSection {
+  padding-top: 120px;
+  padding-bottom: var(--space-4xl);
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: var(--content-max-width); /* 800px */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); /* 16px between groups */
+}
+
+/* Title + industry */
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-size: 36px;
+  font-weight: var(--font-weight-medium);
+  line-height: 44px;
+  letter-spacing: -0.72px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.industry {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.09);
+  animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+/* Metadata: 2-row grid
+   Row 1: My Role (left) | Description (right)
+   Row 2: Tools+Timeline flex wrapper (left) | Context (right)
+   Each row height = max(left, right) → labels always aligned */
+.metaGrid {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 40px;
+  row-gap: var(--space-2xl);
+  padding-top: var(--space-lg);
+  align-items: start;
+  animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.metaBlockRole { grid-column: 1; grid-row: 1; }
+.metaBlockDesc { grid-column: 2; grid-row: 1; }
+
+/* Tools + Timeline: flex column so Timeline always has consistent gap from Tools */
+.metaLeftBottom {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.metaBlockContext { grid-column: 2; grid-row: 2; }
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  line-height: 12px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-lg); /* 16px gap between label and first value */
+}
+
+.metaValue {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 19px;
+  color: #414651;
+}
+
+.metaValue + .metaValue {
+  margin-top: var(--space-md); /* 12px between consecutive values */
+}
+
+.metaBody {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 26px;
+  color: #414651;
+  margin: 0;
+}
+
+.metaBody + .metaBody {
+  margin-top: var(--space-md); /* 12px between consecutive paragraphs */
+}
+
+/* CTA group — wraps one or two CTA buttons */
+.ctaGroup {
+  animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-left: 212px; /* align with right column */
+  align-self: flex-start;
+}
+
+/* CTA button */
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 256px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: #414651;
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-md);
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-gentle);
+  flex-shrink: 0;
+}
+
+.ctaBtn:hover {
+  background: var(--color-bg-hover);
+}
+
+/* ── Content sections ── */
+.contentSection {
+  padding-bottom: var(--space-4xl);
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: var(--content-max-width); /* 800px */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl) 0; /* 24px top and bottom per block */
+}
+
+/* Video block — exact Figma proportions: desktop 800×410, mobile 375×185 */
+.videoBlock {
+  width: 100%;
+  aspect-ratio: 800 / 410;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.videoEl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Natural-proportion video — no forced aspect-ratio, no cropping */
+.videoBlockAuto {
+  aspect-ratio: unset;
+  height: auto;
+  background: transparent;
+  line-height: 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.videoElAuto {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: unset;
+  vertical-align: bottom;
+  border-radius: inherit;
+  transform: scale(1.012);
+}
+
+/* Banner block (Listful / product break) */
+.bannerBlock {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bannerLabel {
+  font-family: var(--font-family);
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+}
+
+/* Image block */
+.imageBlock {
+  width: 100%;
+  height: 450px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  animation: imgFadeIn 0.7s var(--ease-gentle) both;
+}
+
+.imageBlockImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-gentle);
+}
+
+.imageBlock:hover .imageBlockImg {
+  transform: scale(1.03);
+}
+
+@keyframes imgFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text block */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* 24px between text elements */
+  padding-top: 40px;
+}
+
+/* Text-only section (no image above) */
+.textBlockOnly {
+  padding-top: 0;
+}
+
+.blockGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* 24px within each block */
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: var(--font-weight-medium);
+  line-height: 38px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.callout {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.bodyText {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 26px;
+  color: #414651;
+  margin: 0;
+}
+
+/* ── Check list ── */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkIconWrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #F2F4F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  width: 12px;
+  height: 11px;
+}
+
+/* ── Steps grid ── */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.stepCard {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 2px solid #44355B;
+  box-shadow: -4px 4px 0px 0px #44355B;
+  padding: 26px 15px 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+}
+
+.stepCard:hover {
+  transform: translate(2px, -4px);
+  box-shadow: -6px 8px 0px 0px #44355B;
+}
+
+.stepBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #8A5BD0;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 700;
+  color: #1D1D1F;
+  margin: 0;
+  line-height: 20px;
+  white-space: pre-line;
+}
+
+.stepBody {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-regular);
+  color: #565658;
+  line-height: 17px;
+  margin: 0;
+}
+
+/* ── Green theme (Unbound) ── */
+.stepCardGreen {
+  border: 1px solid #E9EAEB;
+  box-shadow: none;
+  border-radius: 16px;
+}
+
+.stepCardGreen:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stepBadgeGreen {
+  background: #00954A;
+}
+
+.checkIconWrapperGreen {
+  background: #DCFCE7;
+}
+
+.list {
+  padding-left: var(--space-2xl); /* 32px */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md); /* 12px between items */
+  list-style: disc;
+  margin: 0;
+}
+
+.listItem {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 24px;
+  color: #414651;
+}
+
+/* ── Lightbox ── */
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: lightboxFadeIn 0.2s ease both;
+  cursor: zoom-out;
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightboxImgWrapper {
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+  animation: lightboxScaleIn 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes lightboxScaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.lightboxImg {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.lightboxClose {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  z-index: 1001;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Clickable image cursor */
+.imageBlockClickable {
+  cursor: zoom-in;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 90px;
+  }
+
+  .heroContainer,
+  .contentContainer {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  /* Metadata: right content first, then left blocks in a row */
+  .metaGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+  }
+
+  .metaBlockDesc    { order: 1; flex: 0 0 100%; }
+  .metaBlockContext { order: 2; flex: 0 0 100%; }
+
+  /* My Role takes 1/3, metaLeftBottom takes 2/3 and splits into Tools + Timeline */
+  .metaBlockRole  { order: 3; flex: 1; min-width: 0; }
+  .metaLeftBottom {
+    order: 3;
+    flex: 2;
+    min-width: 0;
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+  .metaLeftBottom .metaBlock { flex: 1; min-width: 0; }
+
+  /* CTA full width at end on mobile */
+  .ctaGroup {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .ctaBtn {
+    width: 100%;
+  }
+
+  /* Video: exact mobile proportion from Figma 375×185 */
+  .videoBlock {
+    aspect-ratio: 375 / 185;
+    border-radius: 16px;
+  }
+
+  /* Images at natural proportions on mobile */
+  .imageBlock {
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .imageBlockImg {
+    height: auto;
+    object-fit: unset;
+  }
+
+  /* Tighter gaps between content blocks on mobile */
+  .contentBlock {
+    padding: 6px 0;
+  }
+
+  .textBlock {
+    padding-top: 16px;
+  }
+
+  /* Steps: 2×2 grid on mobile */
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

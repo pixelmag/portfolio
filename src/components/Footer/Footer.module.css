@@ -1,0 +1,154 @@
+.footer {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border-secondary);
+}
+
+/* ── Dark variant (Contact page) ── */
+.footerDark {
+  background: var(--color-footer-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footerDark .tagline,
+.footerDark .link {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footerDark .link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footerDark .logo {
+  filter: invert(1);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+/* Three-column row: logo | tagline | links */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MAG wordmark */
+.logoWrap {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 85px;
+  height: 19px;
+  display: block;
+}
+
+/* Tagline wrapper — butterfly spawn origin */
+.taglineWrap {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+/* Butterfly particle — fixed so it floats above everything */
+.butterfly {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 9999;
+  animation: butterflyFly 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes butterflyFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Tagline */
+.tagline {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+/* Links row */
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  width: 267px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  letter-spacing: -0.128px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 4px 16px;
+  transition: color var(--duration-fast) var(--ease-gentle);
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .logoWrap {
+    width: auto;
+  }
+
+  .tagline {
+    text-align: left;
+  }
+
+  .links {
+    width: auto;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .link {
+    padding: 4px 16px;
+  }
+
+  .link:first-child {
+    padding-left: 0;
+  }
+}

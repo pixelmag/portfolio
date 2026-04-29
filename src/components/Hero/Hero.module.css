@@ -1,0 +1,182 @@
+/* ── Section ── */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+/* ── Outer container (max-width 1280px, centered) ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  padding: 0 var(--container-padding);
+}
+
+/* ── Inner content (max-width 800px, centered within container) ── */
+.content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl); /* 32px between text block and buttons */
+}
+
+/* ── Heading block (avatar + subheading + h1 + body) ── */
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* 24px between avatar, heading group, body */
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Avatar ── */
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  flex-shrink: 0;
+  animation: heroSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-hero);
+  letter-spacing: var(--letter-spacing-hero);
+  color: var(--color-text-primary);
+  margin: 0;
+  animation: heroSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+/* ── Body text ── */
+.body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-xl);
+  letter-spacing: -0.16px;
+  color: var(--color-text-secondary);
+  animation: heroSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* ── Actions row ── */
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-md); /* 12px */
+  animation: heroSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
+}
+
+/* ── Shared button base ── */
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm); /* 6px icon gap */
+  height: 48px;
+  padding: var(--space-md) 18px;
+  border-radius: var(--radius-button);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-md);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Primary: green + gradient inner border (top highlight) */
+.btnPrimary {
+  position: relative;
+  background: var(--color-accent);
+  color: var(--color-text-white);
+  border: none;
+  overflow: hidden;
+  transition: background var(--duration-fast) var(--ease-gentle);
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Secondary: white + 1px solid border, hug content */
+.btnSecondary {
+  background: var(--color-bg);
+  color: #414651;
+  border: 1px solid var(--color-border);
+  -webkit-tap-highlight-color: transparent;
+  transition: background var(--duration-fast) var(--ease-gentle);
+}
+
+.btnSecondary:hover {
+  background: var(--color-bg-hover);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+    padding-top: 118px; /* navbar height (50px) + gap (48px) + top offset (20px) */
+    padding-bottom: var(--space-4xl);
+  }
+
+  .content {
+    gap: var(--space-2xl);
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .heading {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+  }
+
+  .body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+  }
+}

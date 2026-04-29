@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --color-bg: #FFFFFF;
+  --color-bg-card: #FAFAFA;
+  --color-text-primary: #181D27;
+  --color-text-secondary: #535862;
+  --color-text-disabled: #717680;
+  --color-text-white: #FFFFFF;
+  --color-accent: #6AB42E;
+  --color-accent-hover: #508723;
+  --color-bg-hover: #F5F5F5;
+  --color-border: #D5D7DA;
+  --color-border-secondary: #E9EAEB;
+  --color-footer-bg: #111110;
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --font-size-hero: 72px;
+  --font-size-xl: 20px;
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --line-height-hero: 90px;
+  --line-height-xl: 30px;
+  --line-height-md: 24px;
+  --letter-spacing-hero: -1.44px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 6px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+
+  /* Radius */
+  --radius-full: 9999px;
+  --radius-card: 24px;
+  --radius-button: 24px;
+  --radius-nav: 56px;
+
+  /* Shadows */
+  --shadow-xs: 0px 1px 2px rgba(10, 13, 18, 0.05);
+  --shadow-nav: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-default: 500ms;
+  --duration-fast: 300ms;
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --container-padding: 80px;
+  --content-max-width: 800px;
+}

@@ -1,0 +1,142 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  padding: 120px 0 80px;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Headline ── */
+.heading {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.headingLight,
+.headingAccent {
+  font-family: var(--font-family);
+  font-size: 60px;
+  font-weight: var(--font-weight-medium);
+  line-height: 68px;
+  letter-spacing: -1.2px;
+  display: block;
+  animation: contactSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.headingLight {
+  color: var(--color-text-primary);
+  animation-delay: 0.1s;
+}
+
+.headingAccent {
+  color: var(--color-accent);
+  animation-delay: 0.2s;
+}
+
+/* ── Email ── */
+.email {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  animation: contactSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+}
+
+.email:hover {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-border);
+}
+
+/* ── Floating emojis ── */
+.floatersWrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floater {
+  position: absolute;
+  animation: floatBob ease-in-out infinite alternate;
+  user-select: none;
+  line-height: 1;
+  will-change: transform;
+}
+
+@keyframes floatBob {
+  0%   { transform: translateY(0px)   rotate(var(--rotate, 0deg)); }
+  100% { transform: translateY(-16px) rotate(calc(var(--rotate, 0deg) + 6deg)); }
+}
+
+/* ── Animation ── */
+@keyframes contactSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop-only floaters hidden on mobile */
+.floaterDesktopHide { display: none; }
+
+@media (max-width: 768px) {
+  .floaterDesktopHide { display: block; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 0 60px;
+  }
+
+  .container {
+    padding: 0 24px;
+    gap: 24px;
+  }
+
+  .headingLight,
+  .headingAccent {
+    letter-spacing: -1px;
+  }
+
+  .floaterMobileHide {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding: 0 16px;
+  }
+}
