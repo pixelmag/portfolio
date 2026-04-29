@@ -538,18 +538,14 @@
 .seedoilsLogoWrap {
   width: 32px;
   height: 32px;
-  border-radius: 8px;
-  background: #f5f2e8;
-  border: 0.6px solid #faf6ea;
-  overflow: hidden;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .seedoilsLogoImg {
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
 }
