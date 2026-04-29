@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import CasePage from './pages/CasePage/CasePage'
@@ -12,7 +12,7 @@ function SoundProvider({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <SoundProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -21,6 +21,6 @@ export default function App() {
           <Route path="/cases/:slug" element={<CasePage />} />
         </Routes>
       </SoundProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
