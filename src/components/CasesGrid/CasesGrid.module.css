@@ -577,9 +577,10 @@
    Hover: shift right + apply CSS rotate(+12.9deg) so net angle ≈ -2.71° (nearly upright). */
 .seedoilsPhone {
   position: absolute;
-  left: 32.9%;
-  top: 6.5%;
-  width: 111%;
+  left: 30%;
+  top: 5%;
+  width: 150%;
+  max-width: none;
   height: auto;
   z-index: 3;
   pointer-events: none;
@@ -589,8 +590,8 @@
               transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .seedoils:hover .seedoilsPhone {
-  left: 39%;
-  top: 9%;
+  left: 34%;
+  top: 8%;
   transform: rotate(12.9deg);
 }
 
@@ -693,9 +694,10 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .seedoilsPhone {
-    left: 32.9%;
-    top: 6.5%;
-    width: 111%;
+    left: 50%;
+    top: 18%;
+    width: 212%;
+    max-width: none;
   }
   .seedoilsProcessing,
   .seedoilsProcessingExpanded {
