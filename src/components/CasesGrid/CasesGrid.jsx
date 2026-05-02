@@ -28,6 +28,12 @@ import royoShapeB     from '../../assets/home/royo/shape-b.png'
 import royoShapeC     from '../../assets/home/royo/shape-c.png'
 import royoShapeD     from '../../assets/home/royo/shape-d.png'
 
+import unboundLogo     from '../../assets/home/unbound/logo.png'
+import unboundScreen   from '../../assets/home/unbound/home-page.png'
+import unboundTrophy   from '../../assets/home/unbound/default.png'
+import unboundPlant    from '../../assets/home/unbound/plant.png'
+import unboundMoney    from '../../assets/home/unbound/money3.gif'
+
 import throneLogos     from '../../assets/home/throne/logos.png'
 import throneCamera    from '../../assets/home/throne/card-camera.png'
 import thronePlant     from '../../assets/home/throne/card-plant.png'
@@ -97,6 +103,39 @@ function SeedOilsAnimation() {
       {/* Description */}
       <p className={styles.seedoilsDesc}>
         Community driven app to find seed oil-free restaurants
+      </p>
+    </>
+  )
+}
+
+function UnboundAnimation() {
+  return (
+    <>
+      {/* Label */}
+      <div className={styles.unboundLabel}>
+        <img src={unboundLogo} alt="" className={styles.unboundLogoImg} />
+        <span className={styles.unboundTag}>Finance</span>
+        <span className={styles.unboundName}>Unbound</span>
+      </div>
+
+      {/* App screenshot — main element, rises on hover */}
+      <img src={unboundScreen} alt="" className={styles.unboundScreen} />
+
+      {/* Trophy icon — overlays first card, fades out on hover */}
+      <img src={unboundTrophy} alt="" className={styles.unboundTrophy} />
+
+      {/* Money gif — overlays first card, fades in on hover */}
+      <img src={unboundMoney} alt="" className={styles.unboundMoney} />
+
+      {/* White cover over jitter.video watermark at bottom of gif */}
+      <div className={styles.unboundWatermarkCover} />
+
+      {/* Plant — bottom left, partially overflowing */}
+      <img src={unboundPlant} alt="" className={styles.unboundPlant} />
+
+      {/* Description */}
+      <p className={styles.unboundDesc}>
+        Redesigning the journey to being debt-free
       </p>
     </>
   )
@@ -183,7 +222,7 @@ const cases = [
   { slug: 'esphera',      label: 'Esphera Capital',      tag: 'Fintech',               className: styles.esphera,   Animation: EspheraAnimation },
   { slug: 'throne',       label: 'Throne & Listful',     tag: 'E-commerce',             className: styles.throne,    Animation: ThroneAnimation },
   { slug: 'sos',          label: 'Seed Oils Scout',      tag: 'Health & Wellness',      className: styles.seedoils,  Animation: SeedOilsAnimation },
-  { slug: 'unbound',      label: 'Unbound',              tag: 'Wellness',               className: styles.unbound },
+  { slug: 'unbound',      label: 'Unbound',              tag: 'Wellness',               className: styles.unbound,   Animation: UnboundAnimation },
   { slug: 'royo',         label: 'Royo',                 tag: 'Education',              className: styles.royo,      Animation: RoyoAnimation },
   { slug: 'petly',        label: 'Petly',                tag: 'Pet care',               className: styles.petly },
   { slug: 'trucksmarter', label: 'Trucksmarter',         tag: 'Logistics & Mobility',   className: styles.tm },

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import logoSrc from '../../assets/logo.svg'
 import styles from './Footer.module.css'
 
@@ -61,9 +62,9 @@ export default function Footer({ dark = false }) {
       <div className={styles.container}>
         <div className={styles.content}>
 
-          <div className={styles.logoWrap}>
+          <Link to="/" className={styles.logoWrap}>
             <img src={logoSrc} alt="MAG" className={styles.logo} />
-          </div>
+          </Link>
 
           <p className={styles.tagline}>
             <ButterflyBurst />

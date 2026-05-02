@@ -195,7 +195,7 @@ export const cases = {
       'Beyond onboarding, the experience lacked clarity and balance — users were required to provide significant input before receiving meaningful value, and key features felt fragmented or difficult to navigate.',
       'The opportunity was to rethink the product holistically: simplifying access, clarifying value, and creating a more engaging and cohesive experience.',
     ],
-    ctaLabel: 'Download Seed Oils Scout',
+    ctaLabel: 'Download Seed Oils',
     ctaHref: 'https://apps.apple.com/us/app/seed-oil-scout-healthy-dining/id1627514527',
     sections: [
       { imageBlock: true, imageSrc: sosImg1 },

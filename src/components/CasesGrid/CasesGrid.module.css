@@ -707,6 +707,135 @@
    Card: 722 × 557 px
 ───────────────────────────────────────────── */
 
+/* ═══════════════════════════════════════════
+   UNBOUND  (Figma node 192-9306)
+   Card: 478 × 400 px
+═══════════════════════════════════════════ */
+
+.unbound       { background: #fafafa; transition: background 0.4s ease; }
+.unbound:hover { background: #f4f9ff; }
+
+/* ── Label ── */
+.unboundLabel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+.unboundLogoImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.unboundTag,
+.unboundName {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  letter-spacing: -0.64px;
+  line-height: 22.4px;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+.unboundTag  { opacity: 1; position: relative; }
+.unboundName { opacity: 0; position: absolute; left: 44px; }
+.unbound:hover .unboundTag  { opacity: 0; }
+.unbound:hover .unboundName { opacity: 1; }
+
+/* ── App screenshot — centered horizontally, top: 19.25% (Figma) ── */
+.unboundScreen {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 19.25%;
+  width: 91%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 71, 171, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.unbound:hover .unboundScreen {
+  transform: translateX(-50%) translateY(-6px);
+  box-shadow: 0 8px 32px rgba(0, 71, 171, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Trophy & money gif — overlay the "Pay in full" card icon area ──
+   First payment card center x ≈ 91px / 440px ≈ 16% */
+.unboundTrophy,
+.unboundMoney {
+  position: absolute;
+  left: 31%;
+  top: 34%;
+  width: 9%;
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.unboundTrophy { opacity: 1; }
+.unboundMoney  { opacity: 0; }
+.unbound:hover .unboundTrophy { opacity: 0; transform: translateY(-6px); }
+.unbound:hover .unboundMoney  { opacity: 1; transform: translateY(-6px); }
+
+/* Covers the jitter.video watermark — bottom-right of trophy/gif, calibrated to pixel bounds */
+.unboundWatermarkCover {
+  position: absolute;
+  left: calc(31% + 29.5px);
+  top: calc(34% + 34px);
+  width: 9px;
+  height: 5px;
+  background: #ffffff;
+  z-index: 6;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.unbound:hover .unboundWatermarkCover {
+  transform: translateY(-6px);
+}
+
+/* ── Plant — left side, bottom aligned with screenshot bottom (304px = card bottom − 96px) ── */
+.unboundPlant {
+  position: absolute;
+  left: -3%;
+  bottom: 96px;
+  width: 22%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.unbound:hover .unboundPlant {
+  transform: translateY(-6px);
+}
+
+/* ── Description: Inter Medium 20px −0.8px, matches Figma ── */
+.unboundDesc {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  white-space: nowrap;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 28px;
+  letter-spacing: -0.8px;
+  margin: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════
+   ROYO */
+
 .royo {
   background: #fafafa;
   transition: background 0.4s ease;
