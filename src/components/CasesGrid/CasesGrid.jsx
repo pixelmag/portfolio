@@ -14,6 +14,20 @@ import sosEmojiSeedling     from '../../assets/home/seedoils/emoji-seedling.png'
 import sosEmojiWheat        from '../../assets/home/seedoils/emoji-wheat.png'
 import sosEmojiMeat         from '../../assets/home/seedoils/emoji-meat.png'
 
+import royoLogo       from '../../assets/home/royo/logo-icon.png'
+import royoGirl       from '../../assets/home/royo/girl.png'
+import royoGlobe      from '../../assets/home/royo/globe.png'
+import royoCover1     from '../../assets/home/royo/cover-1.png'
+import royoCover2     from '../../assets/home/royo/cover-2.png'
+import royoCover3     from '../../assets/home/royo/cover-3.png'
+import royoCover4     from '../../assets/home/royo/cover-4.png'
+import royoCover5     from '../../assets/home/royo/cover-5.png'
+import royoBtnNewBook from '../../assets/home/royo/btn-new-book.png'
+import royoShapeA     from '../../assets/home/royo/shape-a.png'
+import royoShapeB     from '../../assets/home/royo/shape-b.png'
+import royoShapeC     from '../../assets/home/royo/shape-c.png'
+import royoShapeD     from '../../assets/home/royo/shape-d.png'
+
 import throneLogos     from '../../assets/home/throne/logos.png'
 import throneCamera    from '../../assets/home/throne/card-camera.png'
 import thronePlant     from '../../assets/home/throne/card-plant.png'
@@ -121,12 +135,56 @@ function ThroneAnimation() {
   )
 }
 
+function RoyoAnimation() {
+  return (
+    <>
+      {/* Globe — behind everything, peeks from bottom */}
+      <img src={royoGlobe} alt="" className={styles.royoGlobe} />
+
+      {/* Brand shapes */}
+      <img src={royoShapeA} alt="" className={styles.royoShapeA} />
+      <img src={royoShapeB} alt="" className={styles.royoShapeB} />
+      <img src={royoShapeC} alt="" className={styles.royoShapeC} />
+      <img src={royoShapeD} alt="" className={styles.royoShapeD} />
+
+      {/* Plane illustration */}
+      <img src={royoCover4} alt="" className={styles.royoPlane} />
+
+      {/* Scattered small book covers */}
+      <img src={royoCover1} alt="" className={styles.royoCover1} />
+      <img src={royoCover2} alt="" className={styles.royoCover2} />
+      <img src={royoCover5} alt="" className={styles.royoCover5} />
+
+      {/* Dino illustration */}
+      <img src={royoCover3} alt="" className={styles.royoDino} />
+
+      {/* Main book card (girl) */}
+      <img src={royoGirl} alt="" className={styles.royoGirl} />
+
+      {/* New Book button */}
+      <img src={royoBtnNewBook} alt="" className={styles.royoBtnNewBook} />
+
+      {/* Label */}
+      <div className={styles.royoLabel}>
+        <img src={royoLogo} alt="" className={styles.royoLogoImg} />
+        <span className={styles.royoTag}>Education</span>
+        <span className={styles.royoName}>Royo</span>
+      </div>
+
+      {/* Description */}
+      <p className={styles.royoDesc}>
+        Personalized books aligned to each student and curriculum
+      </p>
+    </>
+  )
+}
+
 const cases = [
   { slug: 'esphera',      label: 'Esphera Capital',      tag: 'Fintech',               className: styles.esphera,   Animation: EspheraAnimation },
   { slug: 'throne',       label: 'Throne & Listful',     tag: 'E-commerce',             className: styles.throne,    Animation: ThroneAnimation },
   { slug: 'sos',          label: 'Seed Oils Scout',      tag: 'Health & Wellness',      className: styles.seedoils,  Animation: SeedOilsAnimation },
   { slug: 'unbound',      label: 'Unbound',              tag: 'Wellness',               className: styles.unbound },
-  { slug: 'royo',         label: 'Royo',                 tag: 'Delivery',               className: styles.royo },
+  { slug: 'royo',         label: 'Royo',                 tag: 'Education',              className: styles.royo,      Animation: RoyoAnimation },
   { slug: 'petly',        label: 'Petly',                tag: 'Pet care',               className: styles.petly },
   { slug: 'trucksmarter', label: 'Trucksmarter',         tag: 'Logistics & Mobility',   className: styles.tm },
 ]

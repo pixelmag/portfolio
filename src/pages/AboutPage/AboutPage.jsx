@@ -305,7 +305,7 @@ function MusicCard() {
             <span className={styles.trackTitle}>{t.title}</span>
             <span className={styles.trackSub}>{t.sub}</span>
           </div>
-          <button
+          {i !== 0 && <button
             className={`${styles.trackPlayBtn}${(playing === i || loading === i) ? ` ${styles.trackPlayBtnActive}` : ''}`}
             onClick={() => toggle(i)}
             disabled={loading !== null && loading !== i}
@@ -329,7 +329,7 @@ function MusicCard() {
                   <path d="M0.5 1.5L9.5 6L0.5 10.5V1.5Z" fill="white"/>
                 </svg>
             }
-          </button>
+          </button>}
         </div>
       ))}
     </div>

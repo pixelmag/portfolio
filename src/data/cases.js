@@ -195,8 +195,8 @@ export const cases = {
       'Beyond onboarding, the experience lacked clarity and balance — users were required to provide significant input before receiving meaningful value, and key features felt fragmented or difficult to navigate.',
       'The opportunity was to rethink the product holistically: simplifying access, clarifying value, and creating a more engaging and cohesive experience.',
     ],
-    ctaLabel: 'Download Seed Oils',
-    ctaHref: '#',
+    ctaLabel: 'Download Seed Oils Scout',
+    ctaHref: 'https://apps.apple.com/us/app/seed-oil-scout-healthy-dining/id1627514527',
     sections: [
       { imageBlock: true, imageSrc: sosImg1 },
       {
@@ -251,8 +251,6 @@ export const cases = {
       'Unbound aimed to transform the debt collection experience into something more empowering and user-friendly, combining self-service tools with optional human support.',
       'I joined the project to contribute to a full product redesign, with the goal of improving conversion rates and increasing user engagement. Despite offering valuable solutions, the platform faced challenges around usability, clarity, and user retention, requiring a complete rethink of the experience.',
     ],
-    ctaLabel: 'Visit Unbound',
-    ctaHref: '#',
     sections: [
       { imageBlock: true, imageSrc: unboundImg1 },
       {

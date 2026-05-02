@@ -701,3 +701,285 @@
     left: 5%;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Royo card  (Figma node 192-9434)
+   Card: 722 × 557 px
+───────────────────────────────────────────── */
+
+.royo {
+  background: #fafafa;
+  transition: background 0.4s ease;
+}
+.royo:hover { background: #f5ebfe; }
+
+/* ── Globe — large earth peeking from bottom center-right ── */
+.royoGlobe {
+  position: absolute;
+  left: calc(50% + 129px);
+  bottom: -184px;
+  transform: translateX(-50%) rotate(8deg);
+  width: 55%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  transition: bottom 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoGlobe {
+  bottom: -140px;
+}
+
+/* ── Label ── */
+.royoLabel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.royoLogoImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.royoTag,
+.royoName {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  letter-spacing: -0.64px;
+  line-height: 22.4px;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+.royoTag  { opacity: 1; position: relative; }
+.royoName { opacity: 0; position: absolute; left: 44px; }
+.royo:hover .royoTag  { opacity: 0; }
+.royo:hover .royoName { opacity: 1; }
+
+/* ── Main book (girl) — center-right, dark card frame ──
+   Figma: left calc(50%+133px), top calc(50%-31px), ~222px, rotation 4.71° */
+.royoGirl {
+  position: absolute;
+  left: calc(50% + 133px);
+  top: calc(50% + 6px);
+  transform: translate(-50%, -50%) rotate(4.71deg);
+  width: 31%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 24px;
+  border: 2.5px solid #44355b;
+  box-shadow: -4px 4px 0 0 #44355b;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoGirl {
+  transform: translate(-50%, -58%) rotate(4.71deg);
+}
+
+/* ── Small scattered book covers ──
+   Default: clustered behind girl (hidden). Hover: spread out to Figma positions. */
+/* Cover 1 — default behind girl, hover upper-right (Figma hover: 583.69/722=80.84%, top 95px) */
+.royoCover1 {
+  position: absolute;
+  left: 67%;
+  top: 205px;
+  width: 10%;
+  height: auto;
+  transform: rotate(24.54deg);
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 13px;
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              top  0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoCover1 { left: 80.84%; top: 95px; }
+
+/* Cover 2 — default behind girl, hover upper-left (Figma hover: 317.74/722=44%, top 74px) */
+.royoCover2 {
+  position: absolute;
+  left: 60%;
+  top: 210px;
+  width: 10%;
+  height: auto;
+  transform: rotate(-7.29deg);
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 13px;
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              top  0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoCover2 { left: 44.01%; top: 74px; }
+
+/* Cover 5 — default behind girl, hover lower-left (Figma hover: 280.13/722=38.8%, top 349px) */
+.royoCover5 {
+  position: absolute;
+  left: 60%;
+  top: 248px;
+  width: 10%;
+  height: auto;
+  transform: rotate(-23.57deg);
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 13px;
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              top  0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoCover5 { left: 38.8%; top: 349px; }
+
+/* ── Plane — default behind girl (57% / 189px), hover left side (Figma: 235/722=32.5%, 197px) */
+.royoPlane {
+  position: absolute;
+  left: 57.03%;
+  top: 189px;
+  width: 13%;
+  height: auto;
+  transform: rotate(-15deg);
+  z-index: 1;
+  pointer-events: none;
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              top  0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoPlane {
+  left: 32.55%;
+  top: 197px;
+  transform: rotate(-10deg);
+}
+
+/* ── Dino — default behind girl (70% / 210px), hover right side (Figma: 617/722=85.5%, 323px) */
+.royoDino {
+  position: absolute;
+  left: 70.33%;
+  top: 210px;
+  width: 15%;
+  height: auto;
+  transform: rotate(15deg);
+  z-index: 2;
+  pointer-events: none;
+  transition: left 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              top  0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoDino { left: 85.46%; top: 323px; }
+
+/* ── Brand shapes ── */
+/* Shape A — top of cluster, rotation -19.67°  (Figma x=491, y=66) */
+.royoShapeA {
+  position: absolute;
+  left: 67.9%;
+  top: 66px;
+  width: 8%;
+  height: auto;
+  transform: rotate(-19.67deg);
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoShapeA {
+  transform: rotate(-19.67deg) translateY(-6px);
+}
+
+/* Shape B — left cluster, rotation -26.12°  (Figma x=300, y=159) */
+.royoShapeB {
+  position: absolute;
+  left: 41.6%;
+  top: 159px;
+  width: 8%;
+  height: auto;
+  transform: rotate(-26.12deg);
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoShapeB {
+  transform: rotate(-26.12deg) translateY(-5px);
+}
+
+/* Shape C — right side, rotation +18.25°  (Figma x=578, y=220) */
+.royoShapeC {
+  position: absolute;
+  left: 80%;
+  top: 220px;
+  width: 10%;
+  height: auto;
+  transform: rotate(18.25deg);
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoShapeC {
+  transform: rotate(18.25deg) translateY(-6px);
+}
+
+/* Shape D — center cluster  (Figma x=338, y=294) */
+.royoShapeD {
+  position: absolute;
+  left: 46.8%;
+  top: 294px;
+  width: 7%;
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ── New Book button  (Figma: center at x=489, y=441) ── */
+.royoBtnNewBook {
+  position: absolute;
+  left: calc(50% + 128px);
+  top: 466px;
+  transform: translate(-50%, -50%);
+  width: 34%;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.royo:hover .royoBtnNewBook {
+  transform: translate(-50%, -65%);
+}
+
+/* ── Description ── */
+.royoDesc {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  width: 255px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.8px;
+  color: var(--color-text-primary);
+  line-height: 28px;
+  margin: 0;
+  z-index: 5;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .royoGirl {
+    width: 46%;
+    left: calc(50% + 50px);
+  }
+  .royoCover1, .royoCover2, .royoCover5 {
+    width: 17%;
+  }
+  .royoPlane { width: 24%; }
+  .royoDino  { width: 13%; left: 82%; }
+  .royoGlobe { width: 75%; }
+  .royoBtnNewBook {
+    width: 46%;
+    left: calc(50% + 50px);
+  }
+  .royoDesc {
+    font-size: 16px;
+    line-height: 22px;
+    width: 42%;
+  }
+}
