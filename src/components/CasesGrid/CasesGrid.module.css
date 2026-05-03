@@ -1112,3 +1112,223 @@
     width: 42%;
   }
 }
+
+/* ═══════════════════════════════════════════
+   TRUCKSMARTER  (Figma node 192-9508)
+   Card: 600 × 400 px
+═══════════════════════════════════════════ */
+
+.tm       { background: #fafafa; transition: background 0.4s ease; }
+.tm:hover { background: #fff7e5; }
+
+/* ── Label ── */
+.tmLabel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+/* Logo — yellow square with icon inside */
+.tmLogoWrap {
+  width: 32px;
+  height: 32px;
+  background: #fecd37;
+  border: 0.6px solid #faf6ea;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tmLogoImg {
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.tmTag,
+.tmName {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  letter-spacing: -0.72px;
+  line-height: 25.2px;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+.tmTag  { opacity: 1; position: relative; }
+.tmName { opacity: 0; position: absolute; left: 44px; }
+.tm:hover .tmTag  { opacity: 0; }
+.tm:hover .tmName { opacity: 1; }
+
+/* ── Yellow card ── */
+.tmYellowCard {
+  position: absolute;
+  left: 34.33%;
+  top: 62px;
+  right: -9.33%;
+  aspect-ratio: 384 / 256;
+  background: #fecd37;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              right 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tm:hover .tmYellowCard {
+  left: 35.21%;
+  right: -10.21%;
+}
+
+/* ── Illustration — fills yellow card, extends past edges ── */
+.tmIllustration {
+  position: absolute;
+  top: 52%;
+  left: 44%;
+  width: 65%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ── Sparkles — two diagonal marks, top-left and bottom-right ── */
+.tmSparkles {
+  position: absolute;
+  left: 41%;
+  top: 22%;
+  width: 38px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tm:hover .tmSparkles { opacity: 1; }
+
+/* ── Description — 3-line narrow column matching Figma ── */
+.tmDesc {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 160px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 28px;
+  letter-spacing: -0.8px;
+  margin: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════
+   PETLY  (Figma node 192-9485)
+   Card: 600 × 400 px
+═══════════════════════════════════════════ */
+
+.petly       { background: #fafafa; transition: background 0.4s ease; }
+.petly:hover { background: #fff1e6; }
+
+/* ── Label ── */
+.petlyLabel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.petlyLogoImg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.petlyTag,
+.petlyName {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  letter-spacing: -0.72px;
+  line-height: 25.2px;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+.petlyTag  { opacity: 1; position: relative; }
+.petlyName { opacity: 0; position: absolute; left: 44px; }
+.petly:hover .petlyTag  { opacity: 0; }
+.petly:hover .petlyName { opacity: 1; }
+
+/* ── Orange card — right side, peeks past card edge ── */
+.petlyOrangeCard {
+  position: absolute;
+  left: 34.33%;
+  top: 62px;
+  right: -9.33%;
+  aspect-ratio: 384 / 256;
+  background: #e3985f;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ── Blob shapes — decorative background, rotated ── */
+.petlyBlobsWrap {
+  position: absolute;
+  top: -39.41%;
+  right: -2.95%;
+  bottom: -50.7%;
+  left: -20.58%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.petlyBlobs {
+  flex: none;
+  width: 90%;
+  height: auto;
+  transform: rotate(-34.46deg);
+}
+
+/* ── Dog photo — slides up on hover to reveal full face ── */
+.petlyDog {
+  position: absolute;
+  top: 41.12%;
+  right: -1.03%;
+  bottom: -95.14%;
+  left: -4.65%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: top 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              bottom 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.petly:hover .petlyDog {
+  top: -5.79%;
+  bottom: -48.24%;
+}
+
+/* ── Description ── */
+.petlyDesc {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: 28px;
+  letter-spacing: -0.8px;
+  margin: 0;
+  z-index: 5;
+  pointer-events: none;
+}

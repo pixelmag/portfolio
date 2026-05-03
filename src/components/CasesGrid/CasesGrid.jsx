@@ -34,6 +34,14 @@ import unboundTrophy   from '../../assets/home/unbound/default.png'
 import unboundPlant    from '../../assets/home/unbound/plant.png'
 import unboundMoney    from '../../assets/home/unbound/money3.gif'
 
+import tmLogo         from '../../assets/home/trucksmarter/logo.png'
+import tmIllustration from '../../assets/home/trucksmarter/illustration.png'
+import tmSparkles     from '../../assets/home/trucksmarter/sparkles.png'
+
+import petlyLogo  from '../../assets/home/petly/logo.png'
+import petlyBlobs from '../../assets/home/petly/blobs.png'
+import petlyDog   from '../../assets/home/petly/dog.png'
+
 import throneLogos     from '../../assets/home/throne/logos.png'
 import throneCamera    from '../../assets/home/throne/card-camera.png'
 import thronePlant     from '../../assets/home/throne/card-plant.png'
@@ -218,14 +226,72 @@ function RoyoAnimation() {
   )
 }
 
+function TruckSmarterAnimation() {
+  return (
+    <>
+      {/* Label */}
+      <div className={styles.tmLabel}>
+        <div className={styles.tmLogoWrap}>
+          <img src={tmLogo} alt="" className={styles.tmLogoImg} />
+        </div>
+        <span className={styles.tmTag}>Logistics &amp; Mobility</span>
+        <span className={styles.tmName}>Trucksmarter</span>
+      </div>
+
+      {/* Yellow card */}
+      <div className={styles.tmYellowCard}>
+        {/* Main illustration */}
+        <img src={tmIllustration} alt="" className={styles.tmIllustration} />
+
+        {/* Sparkles — fade in on hover */}
+        <img src={tmSparkles} alt="" className={styles.tmSparkles} />
+      </div>
+
+      {/* Description */}
+      <p className={styles.tmDesc}>
+        Platform for trucking industry professionals
+      </p>
+    </>
+  )
+}
+
+function PetlyAnimation() {
+  return (
+    <>
+      {/* Label */}
+      <div className={styles.petlyLabel}>
+        <img src={petlyLogo} alt="" className={styles.petlyLogoImg} />
+        <span className={styles.petlyTag}>Pet Care</span>
+        <span className={styles.petlyName}>Petly</span>
+      </div>
+
+      {/* Orange card — dog peeks, slides up on hover */}
+      <div className={styles.petlyOrangeCard}>
+        {/* Decorative blobs */}
+        <div className={styles.petlyBlobsWrap}>
+          <img src={petlyBlobs} alt="" className={styles.petlyBlobs} />
+        </div>
+
+        {/* Dog photo */}
+        <img src={petlyDog} alt="" className={styles.petlyDog} />
+      </div>
+
+      {/* Description */}
+      <p className={styles.petlyDesc}>
+        Build by vets<br />who love pets
+      </p>
+    </>
+  )
+}
+
 const cases = [
   { slug: 'esphera',      label: 'Esphera Capital',      tag: 'Fintech',               className: styles.esphera,   Animation: EspheraAnimation },
   { slug: 'throne',       label: 'Throne & Listful',     tag: 'E-commerce',             className: styles.throne,    Animation: ThroneAnimation },
   { slug: 'sos',          label: 'Seed Oils Scout',      tag: 'Health & Wellness',      className: styles.seedoils,  Animation: SeedOilsAnimation },
   { slug: 'unbound',      label: 'Unbound',              tag: 'Wellness',               className: styles.unbound,   Animation: UnboundAnimation },
   { slug: 'royo',         label: 'Royo',                 tag: 'Education',              className: styles.royo,      Animation: RoyoAnimation },
-  { slug: 'petly',        label: 'Petly',                tag: 'Pet care',               className: styles.petly },
-  { slug: 'trucksmarter', label: 'Trucksmarter',         tag: 'Logistics & Mobility',   className: styles.tm },
+  { slug: 'petly',        label: 'Petly',                tag: 'Pet care',               className: styles.petly,     Animation: PetlyAnimation },
+  { slug: 'trucksmarter', label: 'Trucksmarter',         tag: 'Logistics & Mobility',   className: styles.tm,        Animation: TruckSmarterAnimation },
 ]
 
 export default function CasesGrid() {
