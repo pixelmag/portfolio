@@ -904,9 +904,6 @@
   height: auto;
   z-index: 3;
   pointer-events: none;
-  border-radius: 24px;
-  border: 2.5px solid #44355b;
-  box-shadow: -4px 4px 0 0 #44355b;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .royo:hover .royoGirl {
@@ -1146,9 +1143,9 @@
   justify-content: center;
 }
 .tmLogoImg {
-  width: 60%;
-  height: 50%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tmTag,
@@ -1190,7 +1187,7 @@
   position: absolute;
   top: 52%;
   left: 44%;
-  width: 65%;
+  width: 55%;
   height: auto;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -1199,8 +1196,8 @@
 /* ── Sparkles — two diagonal marks, top-left and bottom-right ── */
 .tmSparkles {
   position: absolute;
-  left: 41%;
-  top: 22%;
+  left: 37%;
+  top: 25%;
   width: 38px;
   height: auto;
   pointer-events: none;
@@ -1332,3 +1329,4 @@
   z-index: 5;
   pointer-events: none;
 }
+
