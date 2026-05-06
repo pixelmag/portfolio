@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useRef, useState, useEffect } from 'react'
 import styles from './CasesGrid.module.css'
 
 import espheraLogo  from '../../assets/home/esphera/logo.png'
@@ -74,7 +75,7 @@ function EspheraAnimation() {
 
       {/* Description */}
       <p className={styles.espheraDesc}>
-        Navigate your financial journey with clarity and confidence.
+        Navigate your financial journey<br />with clarity and confidence.
       </p>
     </>
   )
@@ -294,26 +295,44 @@ const cases = [
   { slug: 'trucksmarter', label: 'Trucksmarter',         tag: 'Logistics & Mobility',   className: styles.tm,        Animation: TruckSmarterAnimation },
 ]
 
+function CaseCard({ slug, className, Animation }) {
+  const ref = useRef(null)
+  const [active, setActive] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+          setActive(true)
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.45 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <Link
+      ref={ref}
+      to={`/cases/${slug}`}
+      className={`${styles.card} ${className}${active ? ` ${styles.active}` : ''}`}
+    >
+      <Animation />
+    </Link>
+  )
+}
+
 export default function CasesGrid() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.grid}>
-          {cases.map(({ slug, label, tag, className, Animation }) => (
-            <Link
-              key={slug}
-              to={`/cases/${slug}`}
-              className={`${styles.card} ${className}`}
-            >
-              {Animation ? (
-                <Animation />
-              ) : (
-                <div className={styles.cardLabel}>
-                  <span className={styles.cardName}>{label}</span>
-                  <span className={styles.cardTag}>{tag}</span>
-                </div>
-              )}
-            </Link>
+          {cases.map(({ slug, className, Animation }) => (
+            <CaseCard key={slug} slug={slug} className={className} Animation={Animation} />
           ))}
         </div>
       </div>

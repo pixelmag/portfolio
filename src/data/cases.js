@@ -409,8 +409,8 @@ export const cases = {
     ctaLabel: 'Visit Petly',
     ctaHref: 'https://petfolk.com/',
     sections: [
-      { imageBlock: true, imageSrc: petlyImg1 },
-      { imageBlock: true, imageSrc: petlyImg2 },
+      { imageBlock: true, imageSrc: petlyImg1, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: petlyImg2, imageBg: 'transparent' },
       {
         title: 'Process',
         body: [
@@ -419,9 +419,9 @@ export const cases = {
           'Alongside this, I designed assets aligned with the existing visual language, focusing on simplifying complex concepts and making them easy to understand within the product experience.',
         ],
       },
-      { imageBlock: true, imageSrc: petlyImg3 },
-      { imageBlock: true, imageSrc: petlyImg4 },
-      { imageBlock: true, imageSrc: petlyImg5 },
+      { imageBlock: true, imageSrc: petlyImg3, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: petlyImg4, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: petlyImg5, imageBg: 'transparent' },
       {
         title: 'Outcome',
         body: [
