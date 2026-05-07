@@ -1657,3 +1657,22 @@
   .royoPlane  { display: block; left: 32.55%; top: 197px; width: 10%; transform: rotate(-10deg); }
   .royoDino   { display: block; left: 85.46%; top: 323px; width: 10%; transform: rotate(15deg); }
 }
+
+/* ── iPad Pro (960–1024px): scale up fonts, phone and Unbound screen ── */
+@media (min-width: 960px) and (max-width: 1024px) {
+  /* Bigger desc fonts */
+  .espheraDesc  { font-size: 18px; line-height: 24px; width: 160px; }
+  .seedoilsDesc { font-size: 18px; line-height: 24px; width: 240px; }
+  .unboundDesc  { font-size: 18px; line-height: 24px; }
+  .royoDesc     { font-size: 22px; line-height: 30px; width: 240px; }
+
+  /* Esphera phone — proportionally larger */
+  .espheraPhone { width: 240px; height: 490px; }
+
+  /* Seed Oils phone — bigger, shifted right to clear text */
+  .seedoilsPhone { width: 440px; right: -140px; }
+
+  /* Unbound: bigger screen, trophy smaller and shifted right */
+  .unboundScreen { max-width: 530px; }
+  .unboundTrophy { width: 44px; left: 182px; top: 163px; }
+}
