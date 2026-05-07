@@ -111,7 +111,7 @@ function SeedOilsAnimation() {
 
       {/* Description */}
       <p className={styles.seedoilsDesc}>
-        Community driven app to find seed oil-free restaurants
+        Community driven app to find seed oil{'‑'}free restaurants
       </p>
     </>
   )
