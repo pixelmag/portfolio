@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import avatar from '../../assets/avatar.png'
 import copyIcon from '../../assets/copy-06.svg'
+import magLogo from '../../assets/logo.svg'
 import styles from './Hero.module.css'
 
 const EMAIL = 'nobremagdalena@gmail.com'
@@ -37,7 +38,7 @@ export default function Hero() {
               className={styles.avatar}
             />
 
-            <h1 className={styles.heading}>Hi, I&apos;m Mag</h1>
+            <h1 className={styles.heading}>Hi, I&apos;m <img src={magLogo} alt="Mag" className={styles.magName} /></h1>
 
             <p className={styles.body}>
               I design digital products that balance usability, visual clarity,

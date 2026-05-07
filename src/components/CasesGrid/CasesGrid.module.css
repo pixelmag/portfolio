@@ -1460,10 +1460,15 @@
     max-width: none;
     transform: none !important;
   }
-  .seedoilsProcessing,
+  .seedoilsProcessing {
+    width: 50%;
+    left: 5%;
+    opacity: 0;
+  }
   .seedoilsProcessingExpanded {
     width: 50%;
     left: 5%;
+    opacity: 1;
   }
   .seedoilsDesc {
     font-size: 16px;
@@ -1474,21 +1479,37 @@
     white-space: normal;
   }
 
-  /* ── Unbound: show description, keep screen centered ── */
-  .unboundDesc {
-    display: block;
-    white-space: normal;
-    font-size: 16px;
-    line-height: 22px;
-    width: 44%;
+  /* ── Unbound ── */
+  .unboundTag { opacity: 1; position: relative; }
+  .unboundName { opacity: 0; }
+  .unboundMoney { display: none; }
+  .unboundWatermarkCover { display: none; }
+  .unboundTrophy {
+    opacity: 1;
+    left: 149px;
+    top: 146px;
+    width: 13%;
   }
+  .unbound:hover .unboundTrophy { opacity: 1; transform: none; }
+  .unbound:hover .unboundMoney  { opacity: 0; }
   .unboundScreen {
-    top: 14%;
-    width: 95%;
+    left: 24px;
+    top: 80px;
+    width: 129%;
+    max-width: 442px;
+    transform: none;
   }
   .unboundPlant {
-    bottom: 80px;
     left: -3%;
+    bottom: 70px;
+    width: 30%;
+  }
+  .unboundDesc {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 22px;
+    width: auto;
+    bottom: 24px;
   }
 
   /* ── Petly: no description, orange card matches Figma mobile spec ── */
@@ -1573,4 +1594,9 @@
   .royoCover1, .royoCover2, .royoCover5,
   .royoPlane, .royoDino { display: none; }
 
+}
+
+/* Wider mobile (401–768px): prevent Esphera desc from overlapping the phone */
+@media (min-width: 401px) and (max-width: 768px) {
+  .espheraDesc { width: 120px; }
 }

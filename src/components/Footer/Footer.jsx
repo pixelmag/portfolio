@@ -62,7 +62,7 @@ export default function Footer({ dark = false }) {
       <div className={styles.container}>
         <div className={styles.content}>
 
-          <Link to="/" className={styles.logoWrap}>
+          <Link to="/" className={styles.logoWrap} onClick={() => window.scrollTo(0, 0)}>
             <img src={logoSrc} alt="MAG" className={styles.logo} />
           </Link>
 
