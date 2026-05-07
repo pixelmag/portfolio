@@ -331,6 +331,30 @@
   text-overflow: ellipsis;
 }
 
+/* Wrapper holds the button + absolutely-positioned progress ring */
+.trackPlayWrap {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trackProgressRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Smooth progress arc */
+.trackProgressRing circle:last-child {
+  transition: stroke-dashoffset 0.25s linear;
+}
+
 .trackPlayBtn {
   width: 27px;
   height: 27px;
@@ -343,7 +367,7 @@
   justify-content: center;
   flex-shrink: 0;
   padding: 0;
-  padding-left: 2px; /* optical center the play triangle */
+  /* padding-left for play triangle is applied inline per-state */
   transition: background 0.15s ease;
 }
 

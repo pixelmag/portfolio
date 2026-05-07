@@ -538,6 +538,16 @@
     padding: 0 24px;
     max-width: 100%;
   }
+
+  /* Let images show at natural proportions instead of cropping into fixed 450px height */
+  .imageBlock {
+    height: auto;
+  }
+
+  .imageBlockImg {
+    height: auto;
+    object-fit: unset;
+  }
 }
 
 @media (max-width: 768px) {

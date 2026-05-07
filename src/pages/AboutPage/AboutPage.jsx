@@ -238,9 +238,13 @@ const TRACKS = [
   },
 ]
 
+const RING_R = 15
+const RING_C = 2 * Math.PI * RING_R // ≈ 94.25
+
 function MusicCard() {
   const [playing, setPlaying] = useState(null)
   const [loading, setLoading] = useState(null)
+  const [progress, setProgress] = useState(0) // 0–1
   const audioRef = useRef(null)
 
   useEffect(() => () => { audioRef.current?.pause() }, [])
@@ -258,18 +262,21 @@ function MusicCard() {
     if (playing === i) {
       audioRef.current?.pause()
       setPlaying(null)
+      setProgress(0)
       return
     }
 
     // Stop previous
     if (audioRef.current) {
       audioRef.current.pause()
+      audioRef.current.ontimeupdate = null
       audioRef.current.onended = null
       audioRef.current = null
     }
 
     setLoading(i)
     setPlaying(null)
+    setProgress(0)
 
     try {
       const res  = await fetch(
@@ -281,7 +288,10 @@ function MusicCard() {
 
       const audio = new Audio(previewUrl)
       audioRef.current = audio
-      audio.onended = () => setPlaying(null)
+      audio.ontimeupdate = () => {
+        if (audio.duration) setProgress(audio.currentTime / audio.duration)
+      }
+      audio.onended = () => { setPlaying(null); setProgress(0) }
       await audio.play()
       setPlaying(i)
     } catch {
@@ -305,31 +315,50 @@ function MusicCard() {
             <span className={styles.trackTitle}>{t.title}</span>
             <span className={styles.trackSub}>{t.sub}</span>
           </div>
-          {i !== 0 && <button
-            className={`${styles.trackPlayBtn}${(playing === i || loading === i) ? ` ${styles.trackPlayBtnActive}` : ''}`}
-            onClick={() => toggle(i)}
-            disabled={loading !== null && loading !== i}
-            aria-label={playing === i ? `Pause ${t.title}` : `Play ${t.title} preview`}
-          >
-            {loading === i
-              /* Loading spinner dots */
-              ? <svg width="16" height="4" viewBox="0 0 16 4" fill="none">
-                  <circle cx="2"  cy="2" r="1.5" fill="white" opacity="1"/>
-                  <circle cx="8"  cy="2" r="1.5" fill="white" opacity="0.6"/>
-                  <circle cx="14" cy="2" r="1.5" fill="white" opacity="0.3"/>
+          {i !== 0 && (
+            <div className={styles.trackPlayWrap}>
+              {/* Progress ring — only visible while playing */}
+              {playing === i && (
+                <svg className={styles.trackProgressRing} width="35" height="35" viewBox="0 0 35 35">
+                  <circle cx="17.5" cy="17.5" r={RING_R}
+                    fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="2" />
+                  <circle cx="17.5" cy="17.5" r={RING_R}
+                    fill="none" stroke="white" strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeDasharray={RING_C}
+                    strokeDashoffset={RING_C * (1 - progress)}
+                    transform="rotate(-90 17.5 17.5)"
+                  />
                 </svg>
-              : playing === i
-              /* Pause icon */
-              ? <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
-                  <rect x="1" y="1" width="3" height="10" rx="0.5" fill="white"/>
-                  <rect x="6" y="1" width="3" height="10" rx="0.5" fill="white"/>
-                </svg>
-              /* Play icon */
-              : <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
-                  <path d="M0.5 1.5L9.5 6L0.5 10.5V1.5Z" fill="white"/>
-                </svg>
-            }
-          </button>}
+              )}
+              <button
+                className={`${styles.trackPlayBtn}${(playing === i || loading === i) ? ` ${styles.trackPlayBtnActive}` : ''}`}
+                style={{ paddingLeft: playing === i ? '0' : '2px' }}
+                onClick={() => toggle(i)}
+                disabled={loading !== null && loading !== i}
+                aria-label={playing === i ? `Pause ${t.title}` : `Play ${t.title} preview`}
+              >
+                {loading === i
+                  /* Loading spinner dots */
+                  ? <svg width="16" height="4" viewBox="0 0 16 4" fill="none">
+                      <circle cx="2"  cy="2" r="1.5" fill="white" opacity="1"/>
+                      <circle cx="8"  cy="2" r="1.5" fill="white" opacity="0.6"/>
+                      <circle cx="14" cy="2" r="1.5" fill="white" opacity="0.3"/>
+                    </svg>
+                  : playing === i
+                  /* Pause icon */
+                  ? <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <rect x="1" y="1" width="3" height="10" rx="0.5" fill="white"/>
+                      <rect x="6" y="1" width="3" height="10" rx="0.5" fill="white"/>
+                    </svg>
+                  /* Play icon */
+                  : <svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+                      <path d="M0.5 1.5L9.5 6L0.5 10.5V1.5Z" fill="white"/>
+                    </svg>
+                }
+              </button>
+            </div>
+          )}
         </div>
       ))}
     </div>
