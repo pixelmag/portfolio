@@ -119,7 +119,16 @@ export default function CasePage() {
               {description && (
                 <div className={`${styles.metaBlock} ${styles.metaBlockDesc}`}>
                   <span className={styles.metaLabel}>Description</span>
-                  <p className={styles.metaBody}>{description}</p>
+                  <p className={styles.metaBody}>
+                    {Array.isArray(description)
+                      ? description.map((seg, i) =>
+                          seg.href
+                            ? <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
+                            : <span key={i}>{seg.text}</span>
+                        )
+                      : description
+                    }
+                  </p>
                 </div>
               )}
 

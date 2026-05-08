@@ -52,7 +52,10 @@ export const cases = {
     role: ['Product Designer', 'Branding'],
     tools: ['Figma', 'Figma Motion'],
     timeline: ['Jul 2024', 'Feb 2025'],
-    description: 'Esphera Capital is a wealth management platform that provides clients and advisors with clarity, transparency, and smart tools for investment management.',
+    description: [
+      { text: 'Esphera Capital', href: 'https://espheracapital.com' },
+      { text: ' is a wealth management platform that provides clients and advisors with clarity, transparency, and smart tools for investment management.' },
+    ],
     context: [
       'I joined Esphera Capital as the sole Product Designer to design the platform from the ground up — covering product design, design system, and brand identity.',
       'The product needed to serve both end clients and administrators, supporting complex financial data in a way that felt accessible, trustworthy, and premium across web and mobile.',
@@ -113,7 +116,12 @@ export const cases = {
     role: ['Product Designer'],
     tools: ['Figma'],
     timeline: ['2023', '2024'],
-    description: 'Throne and Listful are two independent products under the same company, each solving a different side of the wishlist experience — one built for creator communities, the other for personal shopping and gift discovery.',
+    description: [
+      { text: 'Throne', href: 'https://throne.com/landing' },
+      { text: ' and ' },
+      { text: 'Listful', href: 'https://www.listful.com' },
+      { text: ' are two independent products under the same company, each solving a different side of the wishlist experience — one built for creator communities, the other for personal shopping and gift discovery.' },
+    ],
     context: [
       'I worked as Product Designer across both platforms, contributing to feature design, UX improvements, and overall experience consistency.',
       'The challenge was designing for two distinct audiences — creators and their fans on Throne, and everyday shoppers on Listful — while ensuring each product felt intentional and purpose-built for its users.',
@@ -189,7 +197,10 @@ export const cases = {
     role: ['Product Designer', 'Visual Designer'],
     tools: ['Figma', 'Jitter'],
     timeline: ['6 Months'],
-    description: 'Seed Oils Scout is a consumer-focused platform designed to help users make informed decisions about nutrition and seed oil consumption through accessible, easy-to-understand information.',
+    description: [
+      { text: 'Seed Oils Scout', href: 'https://www.seedoilscout.com' },
+      { text: ' is a consumer-focused platform designed to help users make informed decisions about nutrition and seed oil consumption through accessible, easy-to-understand information.' },
+    ],
     context: [
       'I worked directly with the product owner and a developer to improve a product that struggled to convert and retain users, largely due to a 22-step onboarding flow with high drop-off rates.',
       'Beyond onboarding, the experience lacked clarity and balance — users were required to provide significant input before receiving meaningful value, and key features felt fragmented or difficult to navigate.',
@@ -321,7 +332,10 @@ export const cases = {
     role: ['Product Designer'],
     tools: ['Runware', 'Figma', 'Tactic'],
     timeline: ['6 Months'],
-    description: 'Royo is an educational platform designed to support schools and institutions through digital tools that improve accessibility, usability, and overall learning experiences.',
+    description: [
+      { text: 'Royo', href: 'https://www.royo.ai' },
+      { text: ' is an educational platform designed to support schools and institutions through digital tools that improve accessibility, usability, and overall learning experiences.' },
+    ],
     context: [
       'Royo had already developed a functional MVP and was testing it with select institutions when they partnered with Qubika. As the new school year approached, the focus shifted toward preparing the product for a full launch.',
       'This involved rethinking sign-up flows to meet regulatory requirements, defining a scalable business model, and improving the overall user experience to deliver a more polished, market-ready product.',
@@ -451,7 +465,10 @@ export const cases = {
     role: ['Visual Designer', 'Illustrator'],
     tools: ['Procreate', 'Illustrator', 'Figma'],
     timeline: ['Jan 2023'],
-    description: 'TruckSmarter is a digital platform designed for truck drivers to manage fuel, access loads, and streamline their day-to-day operations in one place.',
+    description: [
+      { text: 'TruckSmarter', href: 'https://www.trucksmarter.com' },
+      { text: ' is a digital platform designed for truck drivers to manage fuel, access loads, and streamline their day-to-day operations in one place.' },
+    ],
     context: [
       'I worked on TruckSmarter creating custom illustrations and icons to elevate both the product experience and marketing website. The goal was to align visual assets with the brand\'s personality — bold, resilient, empowering, genuine, and playful — while improving how users understand key features and benefits.',
       'These visual elements were designed to simplify complex concepts within the transportation space, acting as a bridge between product functionality and user comprehension. By integrating them across different touchpoints, the experience became more cohesive, approachable, and easier to navigate.',
