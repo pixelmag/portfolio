@@ -23,7 +23,7 @@ export const aboutSections = [
     label: 'How I Got Here',
     paragraphs: [
       [
-        { text: '🎢 My path into design' },
+        { text: "🎢 My path into design " },
         { text: "wasn't exactly linear", bold: true },
         { text: '. I started as an office manager, later transitioned into marketing, and eventually found my place in product design. At the same time, I began studying Economics, but soon realized ' },
         { text: 'I was more drawn to creativity and communication', bold: true },
