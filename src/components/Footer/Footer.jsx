@@ -71,7 +71,7 @@ export default function Footer({ dark = false }) {
           </p>
 
           <nav className={styles.links}>
-            <a href="https://www.linkedin.com/in/magdalena-nobre-89a445147/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/magdalenanobre" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
             <a href="#" className={styles.link}>CV</a>
           </nav>
 
