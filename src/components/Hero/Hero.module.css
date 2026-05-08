@@ -152,10 +152,14 @@
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  .section {
+    min-height: auto;
+  }
+
   .container {
     padding: 0 16px;
     padding-top: 118px; /* navbar height (50px) + gap (48px) + top offset (20px) */
-    padding-bottom: var(--space-4xl);
+    padding-bottom: var(--space-3xl); /* reduced from 4xl so cases sit closer */
   }
 
   .content {
