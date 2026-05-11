@@ -152,16 +152,31 @@ export default function CasePage() {
               {description && (
                 <div className={`${styles.metaBlock} ${styles.metaBlockDesc}`}>
                   <span className={styles.metaLabel}>Description</span>
-                  <p className={styles.metaBody}>
-                    {Array.isArray(description)
-                      ? description.map((seg, i) =>
-                          seg.href
-                            ? <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
-                            : <span key={i}>{seg.text}</span>
-                        )
-                      : description
-                    }
-                  </p>
+                  {Array.isArray(description) && Array.isArray(description[0])
+                    ? description.map((para, i) => (
+                        <p key={i} className={styles.metaBody}>
+                          {para.map((seg, j) =>
+                            seg.href
+                              ? <a key={j} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
+                              : seg.bold
+                                ? <strong key={j}>{seg.text}</strong>
+                                : <span key={j}>{seg.text}</span>
+                          )}
+                        </p>
+                      ))
+                    : <p className={styles.metaBody}>
+                        {Array.isArray(description)
+                          ? description.map((seg, i) =>
+                              seg.href
+                                ? <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
+                                : seg.bold
+                                  ? <strong key={i}>{seg.text}</strong>
+                                  : <span key={i}>{seg.text}</span>
+                            )
+                          : description
+                        }
+                      </p>
+                  }
                 </div>
               )}
 
@@ -192,7 +207,7 @@ export default function CasePage() {
                 <div className={`${styles.metaBlock} ${styles.metaBlockContext}`}>
                   <span className={styles.metaLabel}>Context</span>
                   {context.map((p, i) => (
-                    <p key={i} className={styles.metaBody}>{p}</p>
+                    <RichPara key={i} content={p} className={styles.metaBody} />
                   ))}
                 </div>
               )}
