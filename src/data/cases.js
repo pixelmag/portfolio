@@ -148,79 +148,105 @@ export const cases = {
     slug: 'throne',
     title: 'Throne & Listful',
     industry: 'Consumer & Creator Platforms',
-    role: ['Product Designer'],
-    tools: ['Figma'],
-    timeline: ['2023', '2024'],
+    role: ['Product Designer', 'Branding', 'Visual Designer'],
+    tools: ['Figma', 'After Effects', 'Webflow'],
+    timeline: ['9 Months'],
     description: [
-      { text: 'Throne', href: 'https://throne.com/landing' },
-      { text: ' and ' },
-      { text: 'Listful', href: 'https://www.listful.com' },
-      { text: ' are two independent products under the same company, each solving a different side of the wishlist experience — one built for creator communities, the other for personal shopping and gift discovery.' },
+      [
+        { text: 'Throne and Listful are two independent products under the same company, each addressing different aspects of the gifting and shopping experience. Throne is a gifting platform with ' },
+        { text: '1M+ users', bold: true },
+        { text: ', enabling creators to receive gifts from their audience while protecting sensitive information such as shipping addresses.' },
+      ],
+      [
+        { text: 'Listful is a separate product focused on collaborative and AI-powered wishlist creation, helping users discover and organize products.' },
+      ],
     ],
     context: [
-      'I worked as Product Designer across both platforms, contributing to feature design, UX improvements, and overall experience consistency.',
-      'The challenge was designing for two distinct audiences — creators and their fans on Throne, and everyday shoppers on Listful — while ensuring each product felt intentional and purpose-built for its users.',
+      [
+        { text: 'I worked as a Senior Product Designer on Throne and Listful, two independent platforms under the same company, collaborating closely with ' },
+        { text: 'Eike Drescher', bold: true },
+        { text: ', who led the full redesign of both products.' },
+      ],
     ],
     ctaLabel: 'Download Throne',
     ctaHref: 'https://apps.apple.com/us/app/throne-wishlist-for-creators/id6449217258',
     ctaSecondaryLabel: 'Download Listful',
     ctaSecondaryHref: 'https://apps.apple.com/us/app/listful-wishlist-shopping/id6505107527',
     sections: [
-      { imageBlock: true, imageSrc: throneImg1, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: throneImg2, imageBg: 'transparent' },
       {
-        title: 'Challenge',
-        callout: 'How do you design two distinct platforms that share a mission but serve entirely different audiences?',
+        title: 'The problem',
         body: [
-          'Throne connects content creators with their fans through wishlist gifting — a social and commercial experience that needed to feel fun, trustworthy, and easy to navigate for both sides.',
-          'The platform had to balance creator expression with a streamlined gifting flow for fans, across both web and mobile, while supporting features like gift collections, the Gift Store, and activity feeds.',
+          'Throne and Listful are two complementary products under the same company — one built for creator communities, the other for everyday shoppers and gift discovery. Both were live and growing, but the design team was lean: one lead designer setting product direction, and a development team that needed everything documented, specced, and ready to build without gaps.',
+          'The challenge wasn\'t designing a single feature — it was keeping two products moving in parallel without quality dropping on either side.',
         ],
-        list: [
-          'Designing for creators and fans as two distinct user types with different goals',
-          'Building a consistent experience across web and iOS',
-          'Creating intuitive navigation for a complex multi-feature platform',
-          'Making gifting feel personal, easy, and trustworthy',
+      },
+      { imageBlock: true, imageSrc: throneImg1, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: throneImg5, imageBg: 'transparent' },
+      { imageBlock: true, imageSrc: throneImg6, imageBg: 'transparent' },
+      {
+        title: 'My role',
+        body: [
+          'I worked as the generalist layer of the design team alongside Elke, the lead designer. The dynamic was genuinely collaborative — weekly syncs, constant communication in Slack, and a working relationship where I could question direction, not just execution. That kind of fluid communication extended across every area I touched: marketing, development, and product worked as one connected loop rather than separate handoffs.',
+          'In practice, my scope covered four areas simultaneously:',
+        ],
+        checkList: [
+          [
+            { text: 'Product support on Throne', bold: true },
+            { text: ' — Collaborated closely with the lead designer, owning the handoff to development and mapping every edge case that wasn\'t accounted for in the main flows — the states, errors, empty states, and corner cases that break products in production if no one catches them.' },
+          ],
+          [
+            { text: 'Owned key flows end-to-end', bold: true },
+            { text: ' — Proposed and led the redesign of the Profile, Cart & Checkout, Settings, and Navigation structure on Throne — identifying friction points, defining the improved flows, and seeing them through to implementation.' },
+          ],
+          [
+            { text: 'Design QA', bold: true },
+            { text: ' — Verified Figma specs against implemented screens alongside the development team — closing the gap between designed and developed product, and ensuring quality at the last mile of the process.' },
+          ],
+          [
+            { text: 'AI & Discovery (Listful)', bold: true },
+            { text: ' — Supported AI-generated guides and product discovery flows.' },
+          ],
+          [
+            { text: 'Design systems across both products', bold: true },
+            { text: ' — Built and maintained the component library used by both Throne and Listful, keeping it updated as the products evolved and ensuring the development team had a reliable, documented source of truth.' },
+          ],
+          [
+            { text: 'Side designer for the marketing team', bold: true },
+            { text: ' — Handled all design requests from marketing across both products — social posts, banners, campaign assets, flyers, and motion — while keeping visual consistency with the product and brand.' },
+          ],
+          [
+            { text: 'Brand continuity', bold: true },
+            { text: ' — Worked alongside recurring logo and identity updates on both products, integrating changes across all surfaces without disrupting what was already in production.' },
+          ],
+        ],
+      },
+      { imageBlock: true, imageSrc: throneImg4, imageBg: 'transparent' },
+      {
+        title: 'What made it complex',
+        body: [
+          'Both products ran in parallel on the same timeline. A system change in Throne had implications for Listful. A marketing campaign had to align with whatever was live in the product. An identity update meant updating components, screens, and assets simultaneously. Managing that surface area — while staying closely synced with every team involved — was the core challenge.',
+        ],
+      },
+      { imageBlock: true, imageSrc: throneImg7, imageBg: 'transparent' },
+      {
+        title: 'Results',
+        checkList: [
+          'Two products maintained at production quality simultaneously across product and marketing.',
+          'Design QA process established with the development team, reducing implementation gaps between Figma specs and shipped product.',
+          'Development team had a consistently documented component library, reducing back-and-forth and implementation errors on edge cases.',
+          'Marketing team had dedicated design support without pulling the product team away from core work.',
+          'Profile, settings, and navigation redesign on Throne shipped as proposed improvements to core UX flows.',
         ],
       },
       { imageBlock: true, imageSrc: throneImg3, imageBg: 'transparent' },
-      { imageBlock: true, imageSrc: throneImg4, imageBg: 'transparent' },
-      {
-        title: 'Process',
-        body: [
-          'I worked closely with the product team to identify friction points across existing flows, running heuristic reviews and mapping where users struggled to complete key actions.',
-          'From there, I focused on redesigning core experiences — improving navigation patterns, simplifying the gifting flow, and creating a more consistent visual language across screens.',
-          'I also explored how to make the mobile experience feel as capable as web, especially around wishlist management and discovery.',
-        ],
-        checkList: [
-          'Mapped key user journeys for both creators and fans',
-          'Redesigned navigation to reduce cognitive load and improve findability',
-          'Defined scalable component patterns for consistent UI across platforms',
-          'Supported implementation with detailed specs and design QA',
-        ],
-      },
-      { imageBlock: true, imageSrc: throneImg2, imageBg: 'transparent' },
-      { imageBlock: true, imageSrc: throneImg5, imageBg: 'transparent' },
-      {
-        title: 'Refining Core Experiences',
-        body: [
-          'I collaborated closely with both platforms, focusing on the details that make the experience feel polished and intuitive at every step.',
-          'For Throne, this meant refining the wishlist creation flow, improving how fans browse and gift items, and making social features — like following creators and exploring the Gift Store — feel more discoverable.',
-        ],
-        checkList: [
-          'List & Discover (Throne) — improved wishlist creation and item management',
-          'Social features — friends, follows, and activity feed refinements',
-          'Gift Store — cleaner browsing, filtering, and gifting flows',
-          'Notifications — contextual alerts to keep both fans and creators engaged',
-        ],
-      },
-      { imageBlock: true, imageSrc: throneImg6, imageBg: 'transparent' },
       { videoBlock: true, videoSrc: throneVideo, videoAuto: true },
-      { imageBlock: true, imageSrc: throneImg7, imageBg: 'transparent' },
       {
-        title: 'Outcome',
+        title: 'What I learned',
         body: [
-          'The work across Throne and Listful resulted in more polished and cohesive experiences, with clearer flows and a stronger visual language across both platforms.',
-          'By focusing on the details — navigation, discoverability, and the end-to-end gifting experience — both products became easier to use and more enjoyable for their respective audiences.',
-          'Working across two complementary products in the same ecosystem was a unique challenge that pushed me to think carefully about how product identity and user needs shape every design decision.',
+          'Working across two products simultaneously in a fast-paced environment taught me to think in systems before individual screens — when a decision affects five surfaces instead of one, you stop optimizing locally and start designing for coherence. Tight timelines and evolving priorities required moving fluidly between systems thinking, refining existing ones, and catching the edge cases where product quality is actually won or lost.',
+          'Collaborating closely with Elke was one of the most valuable parts of this experience — contributing to a genuinely collaborative dynamic where an experienced designer added both depth and perspective to my process, and pushed me to be more deliberate about every decision I brought to the table.',
+          'Overall, this strengthened my ability to design within ambiguity, deliver under pressure, and contribute meaningfully across product design, systems thinking, and visual execution.',
         ],
       },
     ],
