@@ -4,6 +4,11 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { cases } from '../../data/cases'
 import defaultCheckIcon from '../../assets/check.svg'
+import espheraCheckIcon from '../../assets/cases/esphera/check.svg'
+
+const caseCheckIcons = {
+  esphera: espheraCheckIcon,
+}
 import styles from './CasePage.module.css'
 
 function ArrowUpRight() {
@@ -52,7 +57,7 @@ export default function CasePage() {
   const openLightbox = useCallback((src) => setLightboxSrc(src), [])
   const closeLightbox = useCallback(() => setLightboxSrc(null), [])
   const isGreen = caseData?.theme === 'green'
-  const checkIcon = caseData?.checkIcon || defaultCheckIcon
+  const checkIcon = caseCheckIcons[slug] || defaultCheckIcon
 
   if (!caseData) {
     return (
