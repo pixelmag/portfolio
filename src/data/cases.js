@@ -77,18 +77,41 @@ export const cases = {
         blocks: [
           {
             body: [
-              'One of the defining constraints of this project was working without detailed requirements. As the sole designer on a product being defined in real time, I had to create structure where there wasn\'t any — mapping the full scope.',
-              'Before touching UI, I mapped the full user flows for both audiences — end clients and advisors — to understand where the product could break down. The biggest risk wasn\'t aesthetics: it was deriving portfolio data — including performance, allocation, historical performance, multi-account management, and collapsing the experience on mobile.',
-              'I built the design system in parallel with the first product screens, not after. That forced component and token decisions to be grounded in real use cases from day one — avoiding the typical "redesign everything" cycle. I worked in short review cycles with the development team, testing feasibility early and reducing rework in later stages.',
-              'The result was 11 core sections — Overview, Balance, Performance, Asset Allocation, Banks, Geographic Exposure, Activity, Transfer Request, External Accounts, Reports, and Settings — each with nested flows and sub-sections, fully adapted to mobile, tablet, and desktop across every screen.',
+              [
+                { text: 'One of the defining constraints of this project was working without detailed requirements. ' },
+                { text: 'As the sole designer on a product being defined in real time, I had to create structure where there wasn\'t any', bold: true },
+                { text: ' — mapping the full scope.' },
+              ],
+              [
+                { text: 'Before touching UI, I mapped the full user flows for both audiences — end clients and advisors — to understand where the product could break down. ' },
+                { text: 'The biggest risk wasn\'t aesthetics: it was deriving portfolio data', bold: true },
+                { text: ' — including performance, allocation, historical performance, multi-account management, and collapsing the experience on mobile.' },
+              ],
+              [
+                { text: 'I built the design system in parallel with the first product screens, not after.', bold: true },
+                { text: ' That forced component and token decisions to be grounded in real use cases from day one — avoiding the typical "redesign everything" cycle. I worked in short review cycles with the development team, testing feasibility early and reducing rework in later stages.' },
+              ],
+              [
+                { text: 'The result was 11 core sections — Overview, Balance, Performance, Asset Allocation, Banks, Geographic Exposure, Activity, Transfer Request, External Accounts, Reports, and Settings — each with nested flows and sub-sections, ' },
+                { text: 'fully adapted to mobile, tablet, and desktop across every screen.', bold: true },
+              ],
             ],
           },
         ],
         callout: 'Key decisions',
         checkList: [
-          'Client tiers (Bronze → Platinum) — Without a sense of progression, all clients — regardless of portfolio size — feel the same experience, diluting perceived value. The tier system introduced hierarchy into the experience and created an impact engagement incentive, aligned with Esphera\'s premium positioning.',
-          'Dark mode as a first-class feature — In wealth management, high-net-worth users expect a premium product. I designed both themes simultaneously from the first screen — not as a toggle added at the end, but as a constraint that made every component intentional across both contexts.',
-          'Admin panel with controlled complexity — The admin panel needed to handle client, account, and permission management without overwhelming users. I chose a progressive information architecture — surfacing only what\'s needed at each level — rather than exposing full complexity upfront.',
+          [
+            { text: 'Client tiers (Bronze → Platinum)', bold: true },
+            { text: ' — Without a sense of progression, all clients — regardless of portfolio size — feel the same experience, diluting perceived value. The tier system introduced hierarchy into the experience and created an impact engagement incentive, aligned with Esphera\'s premium positioning.' },
+          ],
+          [
+            { text: 'Dark mode as a first-class feature', bold: true },
+            { text: ' — In wealth management, high-net-worth users expect a premium product. I designed both themes simultaneously from the first screen — not as a toggle added at the end, but as a constraint that made every component intentional across both contexts.' },
+          ],
+          [
+            { text: 'Admin panel with controlled complexity', bold: true },
+            { text: ' — The admin panel needed to handle client, account, and permission management without overwhelming users. I chose a progressive information architecture — surfacing only what\'s needed at each level — rather than exposing full complexity upfront.' },
+          ],
         ],
       },
       { imageBlock: true, imageSrc: espheraImg3, imageBg: 'transparent' },
@@ -108,8 +131,15 @@ export const cases = {
       {
         title: 'What I learned',
         body: [
-          'Translating an existing brand into a product from zero forces you to make hundreds of decisions that the brand guidelines don\'t answer. I learned that a design system isn\'t just about documentation — it\'s the set of decisions you make early enough that they don\'t become problems later.',
-          'Products don\'t fail on execution — they fail when no one makes the structural decisions early enough. Building the design system in parallel with the product, and mapping all flows before touching UI, were the two calls that kept this project from unraveling.',
+          [
+            { text: 'Translating an existing brand into a product from zero forces you to make hundreds of decisions that the brand guidelines don\'t answer. ' },
+            { text: 'I learned that a design system isn\'t just about documentation', bold: true },
+            { text: ' — it\'s the set of decisions you make early enough that they don\'t become problems later.' },
+          ],
+          [
+            { text: 'Products don\'t fail on execution', bold: true },
+            { text: ' — they fail when no one makes the structural decisions early enough. Building the design system in parallel with the product, and mapping all flows before touching UI, were the two calls that kept this project from unraveling.' },
+          ],
         ],
       },
     ],

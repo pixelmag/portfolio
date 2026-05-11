@@ -11,6 +11,34 @@ const caseCheckIcons = {
 }
 import styles from './CasePage.module.css'
 
+/** Renders a paragraph that can be a plain string or an array of {text, bold?} segments */
+function RichPara({ content, className }) {
+  if (typeof content === 'string') return <p className={className}>{content}</p>
+  return (
+    <p className={className}>
+      {content.map((seg, i) =>
+        seg.bold
+          ? <strong key={i}>{seg.text}</strong>
+          : <span key={i}>{seg.text}</span>
+      )}
+    </p>
+  )
+}
+
+/** Same but renders a <span> wrapper (for checkList items) */
+function RichSpan({ content, className }) {
+  if (typeof content === 'string') return <span className={className}>{content}</span>
+  return (
+    <span className={className}>
+      {content.map((seg, i) =>
+        seg.bold
+          ? <strong key={i}>{seg.text}</strong>
+          : <span key={i}>{seg.text}</span>
+      )}
+    </span>
+  )
+}
+
 function ArrowUpRight() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -266,7 +294,7 @@ export default function CasePage() {
                               <p className={styles.callout}>{block.callout}</p>
                             )}
                             {block.body && block.body.map((p, k) => (
-                              <p key={k} className={styles.bodyText}>{p}</p>
+                              <RichPara key={k} content={p} className={styles.bodyText} />
                             ))}
                             {block.list && (
                               <ul className={styles.list}>
@@ -283,7 +311,7 @@ export default function CasePage() {
                               <p className={styles.callout}>{section.callout}</p>
                             )}
                             {section.body && section.body.map((p, j) => (
-                              <p key={j} className={styles.bodyText}>{p}</p>
+                              <RichPara key={j} content={p} className={styles.bodyText} />
                             ))}
                             {section.list && (
                               <ul className={styles.list}>
@@ -299,7 +327,7 @@ export default function CasePage() {
                                     <div className={`${styles.checkIconWrapper} ${isGreen ? styles.checkIconWrapperGreen : ''}`}>
                                       <img src={checkIcon} alt="" className={styles.checkIcon} />
                                     </div>
-                                    <span className={styles.bodyText}>{item}</span>
+                                    <RichSpan content={item} className={styles.bodyText} />
                                   </li>
                                 ))}
                               </ul>

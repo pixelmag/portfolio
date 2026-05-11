@@ -347,6 +347,11 @@
   margin: 0;
 }
 
+.bodyText strong {
+  font-weight: var(--font-weight-medium);
+  color: #181d27;
+}
+
 /* ── Check list ── */
 .checkList {
   list-style: none;
