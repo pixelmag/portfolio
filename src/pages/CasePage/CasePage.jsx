@@ -212,34 +212,35 @@ export default function CasePage() {
                 </div>
               )}
 
-            </div>
+              {/* Row 3 — right: CTAs */}
+              {(ctaLabel || ctaSecondaryLabel) && (
+                <div className={styles.ctaGroup}>
+                  {ctaLabel && (
+                    <a
+                      href={ctaHref}
+                      className={styles.ctaBtn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {ctaLabel}
+                      <ArrowUpRight />
+                    </a>
+                  )}
+                  {ctaSecondaryLabel && (
+                    <a
+                      href={ctaSecondaryHref}
+                      className={styles.ctaBtn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {ctaSecondaryLabel}
+                      <ArrowUpRight />
+                    </a>
+                  )}
+                </div>
+              )}
 
-            {(ctaLabel || ctaSecondaryLabel) && (
-              <div className={styles.ctaGroup}>
-                {ctaLabel && (
-                  <a
-                    href={ctaHref}
-                    className={styles.ctaBtn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {ctaLabel}
-                    <ArrowUpRight />
-                  </a>
-                )}
-                {ctaSecondaryLabel && (
-                  <a
-                    href={ctaSecondaryHref}
-                    className={styles.ctaBtn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {ctaSecondaryLabel}
-                    <ArrowUpRight />
-                  </a>
-                )}
-              </div>
-            )}
+            </div>
 
           </div>
         </section>
