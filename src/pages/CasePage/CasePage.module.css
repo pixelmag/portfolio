@@ -75,34 +75,37 @@
   animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
-/* Metadata: 2-row grid
-   Row 1: My Role (left) | Description (right)
-   Row 2: Tools+Timeline flex wrapper (left) | Context (right)
-   Each row height = max(left, right) → labels always aligned */
+/* Metadata: two independent flex columns so right column height is self-contained */
 .metaGrid {
-  display: grid;
-  grid-template-columns: 172px 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 40px;
-  row-gap: var(--space-2xl);
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
   padding-top: var(--space-lg);
-  align-items: start;
+  align-items: flex-start;
   animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
-.metaBlockRole { grid-column: 1; grid-row: 1; }
-.metaBlockDesc { grid-column: 2; grid-row: 1; }
-
-/* Tools + Timeline: flex column so Timeline always has consistent gap from Tools */
-.metaLeftBottom {
-  grid-column: 1;
-  grid-row: 2;
+.metaLeft {
+  width: 172px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-2xl);
 }
 
-.metaBlockContext { grid-column: 2; grid-row: 2; }
+.metaRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Tools + Timeline stacked inside left column */
+.metaLeftBottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
 
 .metaBlock {
   display: flex;
@@ -158,10 +161,8 @@
   text-decoration-color: #414651;
 }
 
-/* CTA group — wraps one or two CTA buttons, col 2 row 3 of the meta grid */
+/* CTA group — sits inside metaRight, directly after Context */
 .ctaGroup {
-  grid-column: 2;
-  grid-row: 3;
   animation: caseSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
   display: flex;
   flex-direction: row;
@@ -589,22 +590,28 @@
     line-height: 36px;
   }
 
-  /* Metadata: right content first, then left blocks in a row */
+  /* Metadata: right column first, then left blocks in a row */
   .metaGrid {
-    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  /* Right column (Description, Context, CTAs) comes first */
+  .metaRight { order: 1; }
+
+  /* Left column (Role, Tools, Timeline) comes second as a row */
+  .metaLeft {
+    order: 2;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-xl);
     align-items: flex-start;
   }
 
-  .metaBlockDesc    { order: 1; flex: 0 0 100%; }
-  .metaBlockContext { order: 2; flex: 0 0 100%; }
-
-  /* My Role takes 1/3, metaLeftBottom takes 2/3 and splits into Tools + Timeline */
-  .metaBlockRole  { order: 3; flex: 1; min-width: 0; }
+  /* Role takes 1/3, metaLeftBottom takes 2/3 */
+  .metaLeft > .metaBlock { flex: 1; min-width: 0; }
   .metaLeftBottom {
-    order: 3;
     flex: 2;
     min-width: 0;
     flex-direction: row;
@@ -612,12 +619,9 @@
   }
   .metaLeftBottom .metaBlock { flex: 1; min-width: 0; }
 
-  /* CTA full width at end on mobile */
+  /* CTAs full width at end of right column */
   .ctaGroup {
-    order: 4;
-    flex: 0 0 100%;
     width: 100%;
-    margin-left: 0;
     flex-direction: column;
   }
 
