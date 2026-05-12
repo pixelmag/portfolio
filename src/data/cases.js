@@ -477,24 +477,45 @@ export const cases = {
     ctaLabel: 'Visit Petly',
     ctaHref: 'https://petfolk.com/',
     sections: [
-      { imageBlock: true, imageSrc: petlyImg1, imageBg: 'transparent' },
       { imageBlock: true, imageSrc: petlyImg2, imageBg: 'transparent' },
       {
-        title: 'Process',
+        title: 'The problem',
         body: [
-          'I started by understanding the product, its users, and the role visuals played in communicating health-related information.',
-          'I worked closely with the product and development team to understand technical constraints and ensure the designs were feasible and aligned with the overall product direction. At the same time, I collaborated directly with veterinarians to validate the illustrations, making sure they were not only visually clear but also medically accurate and trustworthy for users.',
-          'Alongside this, I designed assets aligned with the existing visual language, focusing on simplifying complex concepts and making them easy to understand within the product experience.',
+          'Petly needed to communicate complex veterinary health assessments — dental grading and body condition scoring — directly to pet owners through a digital product. The challenge wasn\'t just visual: it was translating clinical information into illustrations accurate enough to be trusted by veterinarians, and clear enough to be understood by someone with no medical background.',
         ],
       },
-      { imageBlock: true, imageSrc: petlyImg3, imageBg: 'transparent' },
+      {
+        imageBlock: true, imageSrc: petlyImg3, imageBg: 'transparent',
+        title: 'My role & process',
+        body: [
+          'I worked alongside another product designer, covering her during leave periods and contributing visual and product design across the platform. My primary focus was the illustration system — creating assets from scratch that had to meet two standards simultaneously: medical accuracy and visual accessibility.',
+          'I started by understanding the clinical criteria behind each assessment — what dental grades actually represent in terms of gum and tooth health, and how body condition scoring maps to visible physical indicators in animals. Without that foundation, the illustrations would have been decorative rather than functional.',
+          'I worked through 4 rounds of veterinary validation — 2 for dental grading, 2 for body condition scoring — iterating based on direct feedback from veterinary professionals. The most significant iteration was on the gum representation in the dental grading series: the initial versions didn\'t clearly convey the progression of gum deterioration across grades, so I reworked the gingival detail until the visual degradation was legible and clinically precise.',
+          'Each illustration was created in Procreate, vectorized in Illustrator, and delivered as final assets in Figma — maintaining consistency with the existing product visual language throughout.',
+        ],
+      },
+      { imageBlock: true, imageSrc: petlyImg1, imageBg: 'transparent' },
+      {
+        title: 'What I designed',
+        checkList: [
+          [{ text: 'Dental grading illustrations', bold: true }, { text: ' Full series created from scratch, showing the progression of oral health deterioration across grades — validated by veterinarians for medical accuracy.' }],
+          [{ text: 'Body condition scoring illustrations', bold: true }, { text: ' Visual scale helping pet owners assess their animal\'s physical condition, also validated through multiple rounds with veterinary professionals.' }],
+          [{ text: 'Empty states', bold: true }, { text: ' Designed to guide users through different app scenarios, maintaining tone and visual consistency across the product.' }],
+          [{ text: 'Mobile preview screens', bold: true }, { text: ' iOS and Android assets for App Store and Play Store presence' }],
+          [{ text: 'Visual support', bold: true }, { text: ' Ensuring consistency between product and marketing touch points.' }],
+        ],
+      },
       { imageBlock: true, imageSrc: petlyImg4, imageBg: 'transparent' },
       { imageBlock: true, imageSrc: petlyImg5, imageBg: 'transparent' },
       {
-        title: 'Outcome',
+        title: 'What I learned',
         body: [
-          'The visual assets helped make complex veterinary concepts more accessible and easier to understand for users, improving how people navigate the product.',
-          'At the same time, maintaining consistency across illustrations, product screens, and marketing materials contributed to a more cohesive and polished experience, supporting both usability and brand perception.',
+          [
+            { text: 'Illustrating for a clinical context taught me that visual design can carry real epistemic weight — ' },
+            { text: 'these weren\'t decorative assets, they were the interface between a veterinary assessment and a pet owner\'s understanding of their animal\'s health.', bold: true },
+            { text: ' Getting the gum deterioration progression right across dental grades wasn\'t an aesthetic problem, it was a communication problem with medical stakes. That raised my standard for what "clear enough" actually means.' },
+          ],
+          'The visual assets helped make complex veterinary concepts more accessible and easier to understand, improving overall clarity within the product. At the same time, maintaining consistency across illustrations, product screens, and marketing materials contributed to a more cohesive and polished experience — supporting both usability and the kind of brand perception that makes users trust a health product enough to act on it.',
         ],
       },
     ],
