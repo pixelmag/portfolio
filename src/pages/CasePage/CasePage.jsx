@@ -160,7 +160,7 @@ export default function CasePage() {
                     )}
                     {timeline.length > 0 && (
                       <div className={styles.metaBlock}>
-                        <span className={styles.metaLabel}>Timeline</span>
+                        <span className={styles.metaLabel}>Timeframe</span>
                         {timeline.map((t, i) => (
                           <span key={i} className={styles.metaValue}>{t}</span>
                         ))}

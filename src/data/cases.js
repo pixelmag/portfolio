@@ -328,7 +328,7 @@ export const cases = {
     industry: 'Finance',
     role: ['Product Designer', 'Visual Designer'],
     tools: ['Figma', 'Gemini'],
-    timeline: ['9 Months'],
+    timeline: ['12 Months'],
     theme: 'green',
     checkIcon: unboundCheck,
     description: 'Unbound is a financial platform focused on helping users manage and resolve their debt through flexible, self-service solutions, making the process more accessible, transparent, and less stressful.',
@@ -469,7 +469,7 @@ export const cases = {
     industry: 'Pet Care',
     role: ['Visual Designer', 'Product Designer'],
     tools: ['Procreate', 'Illustrator', 'Figma'],
-    timeline: ['Jul 2024', 'Jan 2024'],
+    timeline: ['6 Months'],
     description: 'Petly is a modern veterinary care platform that combines in-person services with digital experiences to make pet care more accessible, transparent, and user-friendly for pet owners.',
     context: [
       'I contributed to Petly as a Visual & Product Designer, supporting the development of new features while also creating visual assets to enhance the overall experience.',
@@ -540,7 +540,7 @@ export const cases = {
     industry: 'Logistics & Mobility Platform',
     role: ['Visual Designer', 'Illustrator'],
     tools: ['Procreate', 'Illustrator', 'Figma'],
-    timeline: ['Jan 2023'],
+    timeline: ['2 Months'],
     description: [
       { text: 'TruckSmarter', href: 'https://www.trucksmarter.com' },
       { text: ' is a digital platform designed for truck drivers to manage fuel, access loads, and streamline their day-to-day operations in one place.' },
