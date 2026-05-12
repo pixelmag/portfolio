@@ -477,8 +477,6 @@ export const cases = {
       'In addition, I worked on mobile preview screens for iOS and Android, as well as visual support for landing pages, ensuring consistency across product and marketing touchpoints.',
     ],
     checkIcon: petlyCheck,
-    ctaLabel: 'Visit Petly',
-    ctaHref: 'https://petfolk.com/',
     sections: [
       { imageBlock: true, imageSrc: petlyImg2, imageBg: 'transparent' },
       {
@@ -568,8 +566,8 @@ export const cases = {
         title: 'My process',
         body: [
           [
-            { text: 'I started by studying the existing illustration system in depth — understanding the style rules, stroke weights, color usage, and the personality behind the work before creating a single new asset. TruckSmarter\'s brand has a specific character: ' },
-            { text: 'bold, resilient, and genuinely playful', bold: true },
+            { text: 'I started by studying the existing illustration system in depth — understanding the style rules, stroke weights, color usage, and the personality behind the work before creating a single new asset. ' },
+            { text: 'TruckSmarter\'s brand has a specific character: bold, resilient, and genuinely playful', bold: true },
             { text: ' — and every illustration had to carry that without me imposing my own aesthetic over it.' },
           ],
           'I worked directly with the design owner and their web/product designer, aligning on priorities and ensuring each asset addressed a specific feature or communication need before moving to execution.',
