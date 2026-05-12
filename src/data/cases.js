@@ -107,15 +107,15 @@ export const cases = {
         checkList: [
           [
             { text: 'Client tiers (Bronze → Platinum)', bold: true },
-            { text: ' — Without a sense of progression, all clients — regardless of portfolio size — feel the same experience, diluting perceived value. The tier system introduced hierarchy into the experience and created an impact engagement incentive, aligned with Esphera\'s premium positioning.' },
+            { text: 'Without a sense of progression, all clients — regardless of portfolio size — feel the same experience, diluting perceived value. The tier system introduced hierarchy into the experience and created an impact engagement incentive, aligned with Esphera\'s premium positioning.' },
           ],
           [
             { text: 'Dark mode as a first-class feature', bold: true },
-            { text: ' — In wealth management, high-net-worth users expect a premium product. I designed both themes simultaneously from the first screen — not as a toggle added at the end, but as a constraint that made every component intentional across both contexts.' },
+            { text: 'In wealth management, high-net-worth users expect a premium product. I designed both themes simultaneously from the first screen — not as a toggle added at the end, but as a constraint that made every component intentional across both contexts.' },
           ],
           [
             { text: 'Admin panel with controlled complexity', bold: true },
-            { text: ' — The admin panel needed to handle client, account, and permission management without overwhelming users. I chose a progressive information architecture — surfacing only what\'s needed at each level — rather than exposing full complexity upfront.' },
+            { text: 'The admin panel needed to handle client, account, and permission management without overwhelming users. I chose a progressive information architecture — surfacing only what\'s needed at each level — rather than exposing full complexity upfront.' },
           ],
         ],
       },
@@ -200,31 +200,31 @@ export const cases = {
         checkList: [
           [
             { text: 'Product support on Throne', bold: true },
-            { text: ' — Collaborated closely with the lead designer, owning the handoff to development and mapping every edge case that wasn\'t accounted for in the main flows — the states, errors, empty states, and corner cases that break products in production if no one catches them.' },
+            { text: 'Collaborated closely with the lead designer, owning the handoff to development and mapping every edge case that wasn\'t accounted for in the main flows — the states, errors, empty states, and corner cases that break products in production if no one catches them.' },
           ],
           [
             { text: 'Owned key flows end-to-end', bold: true },
-            { text: ' — Proposed and led the redesign of the Profile, Cart & Checkout, Settings, and Navigation structure on Throne — identifying friction points, defining the improved flows, and seeing them through to implementation.' },
+            { text: 'Proposed and led the redesign of the Profile, Cart & Checkout, Settings, and Navigation structure on Throne — identifying friction points, defining the improved flows, and seeing them through to implementation.' },
           ],
           [
             { text: 'Design QA', bold: true },
-            { text: ' — Verified Figma specs against implemented screens alongside the development team — closing the gap between designed and developed product, and ensuring quality at the last mile of the process.' },
+            { text: 'Verified Figma specs against implemented screens alongside the development team — closing the gap between designed and developed product, and ensuring quality at the last mile of the process.' },
           ],
           [
             { text: 'AI & Discovery (Listful)', bold: true },
-            { text: ' — Supported AI-generated guides and product discovery flows.' },
+            { text: 'Supported AI-generated guides and product discovery flows.' },
           ],
           [
             { text: 'Design systems across both products', bold: true },
-            { text: ' — Built and maintained the component library used by both Throne and Listful, keeping it updated as the products evolved and ensuring the development team had a reliable, documented source of truth.' },
+            { text: 'Built and maintained the component library used by both Throne and Listful, keeping it updated as the products evolved and ensuring the development team had a reliable, documented source of truth.' },
           ],
           [
             { text: 'Sole designer for the marketing team', bold: true },
-            { text: ' — Handled all design requests from marketing across both products — social posts, banners, campaign assets, flyers, and motion — while keeping visual consistency with the product and brand.' },
+            { text: 'Handled all design requests from marketing across both products — social posts, banners, campaign assets, flyers, and motion — while keeping visual consistency with the product and brand.' },
           ],
           [
             { text: 'Brand continuity', bold: true },
-            { text: ' — Worked alongside recurring logo and identity updates on both products, integrating changes across all surfaces without disrupting what was already in production.' },
+            { text: 'Worked alongside recurring logo and identity updates on both products, integrating changes across all surfaces without disrupting what was already in production.' },
           ],
         ],
       },
@@ -300,11 +300,11 @@ export const cases = {
       {
         title: 'Key decisions',
         checkList: [
-          [{ text: 'Onboarding redesign', bold: true }, { text: ' — Reduced the flow from 22 to 13 steps by cutting every input that wasn\'t essential to delivering first value. The principle was simple: don\'t ask until the product has earned the right to ask. Within the first week of the redesign going live, the owner reported a measurable lift in conversion — an early signal that simplifying access to value had an immediate impact on user behavior.' }],
-          [{ text: 'Grocery scan flow', bold: true }, { text: ' — Only a single scan screen existed. I designed the complete flow around it — from capture to results — translating raw ingredient data into clear, actionable categories (recommended, ok, caution, avoid) so users could make decisions instantly without needing prior nutritional knowledge.' }],
-          [{ text: 'Paywall redesign', bold: true }, { text: ' — Took full ownership of rethinking how the product communicated its value at the conversion moment. Redesigned the entry point to lead with what users get, not what they\'re being asked to pay — reordering the value proposition to match where users were in their understanding of the product.' }],
-          [{ text: 'Filters and reporting', bold: true }, { text: ' — Consolidated complex filtering into a single flexible sheet, and redesigned the reporting flow to support both quick and detailed input — lowering the barrier for user contribution without removing depth for power users.' }],
-          [{ text: 'Map interactions', bold: true }, { text: ' — Refined pin previews and key actions to support faster, more confident exploration of the product\'s core discovery feature.' }],
+          [{ text: 'Onboarding redesign', bold: true }, { text: 'Reduced the flow from 22 to 13 steps by cutting every input that wasn\'t essential to delivering first value. The principle was simple: don\'t ask until the product has earned the right to ask. Within the first week of the redesign going live, the owner reported a measurable lift in conversion — an early signal that simplifying access to value had an immediate impact on user behavior.' }],
+          [{ text: 'Grocery scan flow', bold: true }, { text: 'Only a single scan screen existed. I designed the complete flow around it — from capture to results — translating raw ingredient data into clear, actionable categories (recommended, ok, caution, avoid) so users could make decisions instantly without needing prior nutritional knowledge.' }],
+          [{ text: 'Paywall redesign', bold: true }, { text: 'Took full ownership of rethinking how the product communicated its value at the conversion moment. Redesigned the entry point to lead with what users get, not what they\'re being asked to pay — reordering the value proposition to match where users were in their understanding of the product.' }],
+          [{ text: 'Filters and reporting', bold: true }, { text: 'Consolidated complex filtering into a single flexible sheet, and redesigned the reporting flow to support both quick and detailed input — lowering the barrier for user contribution without removing depth for power users.' }],
+          [{ text: 'Map interactions', bold: true }, { text: 'Refined pin previews and key actions to support faster, more confident exploration of the product\'s core discovery feature.' }],
         ],
       },
       { imageBlock: true, imageSrc: sosImg4 },
