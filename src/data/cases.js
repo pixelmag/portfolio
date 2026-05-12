@@ -420,9 +420,9 @@ export const cases = {
         ],
       },
       {
-        title: 'My process',
+        title: 'The problem',
         body: [
-          'I worked alongside a PM and development teams to understand the existing MVP, conducting user interviews with teachers to understand where the existing experience created friction and where the product needed to grow. Two interviews sounds like a small sample — but in an institutional context where teachers are the primary gatekeepers of student adoption, their perspective was the most direct signal available.',
+          'I worked alongside a PM development teams to understand the existing MVP, conducting user interviews with teachers to understand where the existing experience created friction and where the product needed to grow. Two interviews sounds like a small sample — but in an institutional context where teachers are the primary gatekeepers of student adoption, their perspective was the most direct signal available.',
           'From there I mapped flows and edge cases for every new feature, updated and extended the existing design system for consistency and scalability, and used Runware for AI-assisted image generation to maintain visual quality without slowing down iteration.',
         ],
       },
