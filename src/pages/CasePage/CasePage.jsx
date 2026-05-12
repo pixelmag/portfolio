@@ -326,14 +326,21 @@ export default function CasePage() {
                             )}
                             {section.checkList && (
                               <ul className={styles.checkList}>
-                                {section.checkList.map((item, j) => (
-                                  <li key={j} className={styles.checkItem}>
-                                    <div className={`${styles.checkIconWrapper} ${isGreen ? styles.checkIconWrapperGreen : ''}`}>
-                                      <img src={checkIcon} alt="" className={styles.checkIcon} />
-                                    </div>
-                                    <RichSpan content={item} className={styles.bodyText} />
-                                  </li>
-                                ))}
+                                {section.checkList.map((item, j) => {
+                                  const icon = section.checkIcon || checkIcon
+                                  const bg = section.checkBg
+                                  return (
+                                    <li key={j} className={styles.checkItem}>
+                                      <div
+                                        className={`${styles.checkIconWrapper} ${isGreen ? styles.checkIconWrapperGreen : ''}`}
+                                        style={bg ? { background: bg } : undefined}
+                                      >
+                                        <img src={icon} alt="" className={styles.checkIcon} />
+                                      </div>
+                                      <RichSpan content={item} className={styles.bodyText} />
+                                    </li>
+                                  )
+                                })}
                               </ul>
                             )}
                             {section.steps && (
