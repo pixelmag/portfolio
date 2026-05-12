@@ -558,21 +558,38 @@ export const cases = {
       { imageBlock: true, imageSrc: tmImg1 },
       { imageBlock: true, imageSrc: tmImg2 },
       {
-        title: 'Process',
+        title: 'The problem',
         body: [
-          'I started by understanding the existing illustration style and how it was being used across the product and marketing website.',
-          'From there, I focused on expanding the current visual system by creating new illustrations and icons that aligned with the established direction. The goal was to maintain consistency while covering new use cases and product needs.',
-          'I worked closely with the team to ensure the assets supported key features and communicated information clearly, making sure they could be easily integrated across different touchpoints.',
+          'TruckSmarter needed to expand their visual asset library to cover new product features and marketing needs — without drifting from an established illustration style that was already core to their brand identity. The challenge was matching an established visual language well enough that the new assets felt like a natural extension of the existing system.',
         ],
       },
       { imageBlock: true, imageSrc: tmImg3 },
+      {
+        title: 'My process',
+        body: [
+          [
+            { text: 'I started by studying the existing illustration system in depth — understanding the style rules, stroke weights, color usage, and the personality behind the work before creating a single new asset. TruckSmarter\'s brand has a specific character: ' },
+            { text: 'bold, resilient, and genuinely playful', bold: true },
+            { text: ' — and every illustration had to carry that without me imposing my own aesthetic over it.' },
+          ],
+          'I worked directly with the design owner and their web/product designer, aligning on priorities and ensuring each asset addressed a specific feature or communication need before moving to execution.',
+          'For the iconography, I worked within a custom grid provided by the client — ensuring every icon was proportionally consistent with their existing set, not just visually similar.',
+        ],
+      },
       { imageBlock: true, imageSrc: tmImg4 },
+      {
+        title: 'What I delivered',
+        checkList: [
+          [{ text: '24 illustrations', bold: true }, { text: ' Covering new product features and web assets — all created within the established style, extending the system without breaking it' }],
+          [{ text: '25 custom icons', bold: true }, { text: ' Built to the client\'s proportional grid, consistent with the existing iconography across product and marketing touchpoints' }],
+          [{ text: 'Full delivery in two months, integrated across product and marketing surfaces', bold: true }],
+        ],
+      },
       { imageBlock: true, imageSrc: tmImg5 },
       {
-        title: 'Outcome',
+        title: 'What I learned',
         body: [
-          'The expanded set of illustrations and iconography helped create a more consistent and cohesive experience across product and marketing.',
-          'By extending the existing visual language, the product was able to communicate features and benefits more clearly, making complex concepts easier to understand while reinforcing the brand\'s personality.',
+          'Matching someone else\'s illustration style at production quality is a specific skill — it requires setting aside your own aesthetic instincts and fully inhabiting a visual language that isn\'t yours. The discipline of working within a client-defined grid for the icons, and studying the existing illustrations before drawing a single new one, taught me that consistency is a form of craft, not a constraint on it.',
         ],
       },
     ],
