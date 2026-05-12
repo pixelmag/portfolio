@@ -42,10 +42,8 @@ export default function Hero() {
 
             <p className={styles.body}>
               I design digital products that balance usability, visual clarity,
-              and business goals.
-              <br /><br />
-              My work focuses on simplifying complex systems into intuitive,
-              scalable experiences.
+              and business goals. My work focuses on simplifying complex systems
+              into intuitive, scalable experiences — across industries, from 0 to launch.
             </p>
           </div>
 
