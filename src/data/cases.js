@@ -38,6 +38,7 @@ import tmImg2 from '../assets/trucksmarter/img-2.png'
 import tmImg3 from '../assets/trucksmarter/img-3.png'
 import tmImg4 from '../assets/trucksmarter/img-4.png'
 import tmImg5 from '../assets/trucksmarter/img-5.png'
+import trucksmarterCheck from '../assets/trucksmarter/check.svg'
 
 import petlyImg1 from '../assets/petly/img-1.png'
 import petlyImg2 from '../assets/petly/img-2.png'
@@ -550,6 +551,7 @@ export const cases = {
       'I worked on TruckSmarter creating custom illustrations and icons to elevate both the product experience and marketing website. The goal was to align visual assets with the brand\'s personality — bold, resilient, empowering, genuine, and playful — while improving how users understand key features and benefits.',
       'These visual elements were designed to simplify complex concepts within the transportation space, acting as a bridge between product functionality and user comprehension. By integrating them across different touchpoints, the experience became more cohesive, approachable, and easier to navigate.',
     ],
+    checkIcon: trucksmarterCheck,
     ctaLabel: 'Visit Trucksmarter',
     ctaHref: 'https://www.trucksmarter.com/',
     sections: [
