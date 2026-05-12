@@ -272,15 +272,14 @@ export const cases = {
     sections: [
       { imageBlock: true, imageSrc: sosImg1 },
       {
-        title: 'Process',
+        title: 'My role and process',
         body: [
-          'Working within a small, focused team allowed for fast iteration and direct impact on product decisions.',
-          'I approached the product end-to-end — not just onboarding — identifying friction points across flows and rethinking how different parts of the experience connected.',
-          'This involved redefining journeys, simplifying complex interactions, and continuously validating ideas together to ensure both usability and feasibility.',
+          'I worked as the sole designer embedded in a three-person team alongside a developer and the product owner. The working dynamic was intentionally lean — briefs were design-led, and I had full latitude to define the problem, propose the solution, and drive it to implementation.',
+          'That kind of ownership meant I wasn\'t just executing requests — I was making product decisions on every ticket, then validating them collaboratively before handing off to dev.',
+          'I approached the product end-to-end: mapping friction points across all key flows, identifying where users were losing confidence or dropping off, and rethinking how different parts of the experience connected before touching any UI.',
         ],
       },
       { imageBlock: true, imageSrc: sosImg2, imageBg: '#EBF4EB', imageFit: 'contain' },
-      { imageBlock: true, imageSrc: sosImg3 },
       {
         title: 'Understanding ingredients instantly',
         body: [
@@ -288,23 +287,34 @@ export const cases = {
           'The experience translates raw ingredient data into clear categories — recommended, ok, caution, or avoid — helping users quickly understand product quality without needing prior knowledge.',
         ],
       },
+      { imageBlock: true, imageSrc: sosImg3 },
+      {
+        title: 'Key decisions',
+        checkList: [
+          [{ text: 'Onboarding redesign', bold: true }, { text: ' — Reduced the flow from 22 to 13 steps by cutting every input that wasn\'t essential to delivering first value. The principle was simple: don\'t ask until the product has earned the right to ask. Within the first week of the redesign going live, the owner reported a measurable lift in conversion — an early signal that simplifying access to value had an immediate impact on user behavior.' }],
+          [{ text: 'Grocery scan flow', bold: true }, { text: ' — Only a single scan screen existed. I designed the complete flow around it — from capture to results — translating raw ingredient data into clear, actionable categories (recommended, ok, caution, avoid) so users could make decisions instantly without needing prior nutritional knowledge.' }],
+          [{ text: 'Paywall redesign', bold: true }, { text: ' — Took full ownership of rethinking how the product communicated its value at the conversion moment. Redesigned the entry point to lead with what users get, not what they\'re being asked to pay — reordering the value proposition to match where users were in their understanding of the product.' }],
+          [{ text: 'Filters and reporting', bold: true }, { text: ' — Consolidated complex filtering into a single flexible sheet, and redesigned the reporting flow to support both quick and detailed input — lowering the barrier for user contribution without removing depth for power users.' }],
+          [{ text: 'Map interactions', bold: true }, { text: ' — Refined pin previews and key actions to support faster, more confident exploration of the product\'s core discovery feature.' }],
+        ],
+      },
       { imageBlock: true, imageSrc: sosImg4 },
       {
-        title: 'Designing for conversion',
-        body: [
-          'I improved key moments across the product to reduce friction and make the experience more intuitive and engaging.',
-          'This included redesigning entry points like paywall and login to better communicate value, as well as introducing a mission-based system to encourage ongoing engagement through rewards and progression.',
-          'I also simplified complex interactions, such as consolidating advanced filters into a single flexible sheet, and redesigned reporting flows to support both quick and detailed input — lowering the barrier for user contribution.',
-          'Additionally, I refined map interactions, improving pin previews and key actions to support faster and more confident exploration.',
+        title: 'Results',
+        checkList: [
+          'Onboarding reduced from 22 to 13 steps with conversion lift reported in the first week post-launch.',
+          'Grocery scan evolved from a single screen to a complete, self-contained flow.',
+          'Paywall, filters, reporting, and map interactions redesigned across the product — improving cohesion and reducing friction at every key touchpoint.',
+          'Full design-to-dev handoff managed end-to-end, working directly with a single developer throughout.',
         ],
       },
       { imageBlock: true, imageSrc: sosImg5 },
       {
-        title: 'Outcome',
+        title: 'What I learned',
         body: [
-          'The redesign resulted in a more accessible and engaging experience, reducing friction across key flows and improving how users interact with the product.',
-          'By simplifying onboarding and expanding improvements across the platform, the experience became more cohesive, intuitive, and aligned with user expectations.',
-          'The work also helped establish a stronger foundation for future growth and iteration.',
+          'Working with minimal briefs and full design latitude is one of the most honest tests of product thinking. The quality of your output depends entirely on how well you can frame the problem before you solve it — and I learned to treat every ambiguous request as a design problem in itself.',
+          'By focusing not just on onboarding but on the experience as a whole, the product became more cohesive, intuitive, and aligned with user expectations. The work also helped establish a stronger foundation for future growth and iteration — something that mattered especially in a context where we were an external team, and the product needed to keep moving long after our involvement ended.',
+          'The best way to earn trust in a small, fast-moving team is to consistently bring back more than what was asked for.',
         ],
       },
     ],
