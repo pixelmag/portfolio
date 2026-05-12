@@ -72,7 +72,7 @@ export default function Footer({ dark = false }) {
 
           <nav className={styles.links}>
             <a href="https://www.linkedin.com/in/magdalenanobre" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
-            <a href="#" className={styles.link}>CV</a>
+            <a href="/portfolio/Resume.pdf" download className={styles.link}>CV</a>
           </nav>
 
         </div>
