@@ -138,107 +138,95 @@ export default function CasePage() {
 
             <div className={styles.metaGrid}>
 
-              {/* Row 1 — left: My Role */}
-              {role.length > 0 && (
-                <div className={`${styles.metaBlock} ${styles.metaBlockRole}`}>
-                  <span className={styles.metaLabel}>My Role</span>
-                  {role.map((r, i) => (
-                    <span key={i} className={styles.metaValue}>{r}</span>
-                  ))}
-                </div>
-              )}
+              {/* Left column: Role → Tools + Timeline */}
+              <div className={styles.metaLeft}>
+                {role.length > 0 && (
+                  <div className={styles.metaBlock}>
+                    <span className={styles.metaLabel}>My Role</span>
+                    {role.map((r, i) => (
+                      <span key={i} className={styles.metaValue}>{r}</span>
+                    ))}
+                  </div>
+                )}
+                {(tools.length > 0 || timeline.length > 0) && (
+                  <div className={styles.metaLeftBottom}>
+                    {tools.length > 0 && (
+                      <div className={styles.metaBlock}>
+                        <span className={styles.metaLabel}>Tools</span>
+                        {tools.map((t, i) => (
+                          <span key={i} className={styles.metaValue}>{t}</span>
+                        ))}
+                      </div>
+                    )}
+                    {timeline.length > 0 && (
+                      <div className={styles.metaBlock}>
+                        <span className={styles.metaLabel}>Timeline</span>
+                        {timeline.map((t, i) => (
+                          <span key={i} className={styles.metaValue}>{t}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
 
-              {/* Row 1 — right: Description */}
-              {description && (
-                <div className={`${styles.metaBlock} ${styles.metaBlockDesc}`}>
-                  <span className={styles.metaLabel}>Description</span>
-                  {Array.isArray(description) && Array.isArray(description[0])
-                    ? description.map((para, i) => (
-                        <p key={i} className={styles.metaBody}>
-                          {para.map((seg, j) =>
-                            seg.href
-                              ? <a key={j} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
-                              : seg.bold
-                                ? <strong key={j}>{seg.text}</strong>
-                                : <span key={j}>{seg.text}</span>
-                          )}
-                        </p>
-                      ))
-                    : <p className={styles.metaBody}>
-                        {Array.isArray(description)
-                          ? description.map((seg, i) =>
+              {/* Right column: Description → Context → CTAs */}
+              <div className={styles.metaRight}>
+                {description && (
+                  <div className={styles.metaBlock}>
+                    <span className={styles.metaLabel}>Description</span>
+                    {Array.isArray(description) && Array.isArray(description[0])
+                      ? description.map((para, i) => (
+                          <p key={i} className={styles.metaBody}>
+                            {para.map((seg, j) =>
                               seg.href
-                                ? <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
+                                ? <a key={j} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
                                 : seg.bold
-                                  ? <strong key={i}>{seg.text}</strong>
-                                  : <span key={i}>{seg.text}</span>
-                            )
-                          : description
-                        }
-                      </p>
-                  }
-                </div>
-              )}
-
-              {/* Row 2 — left: Tools + Timeline together */}
-              {(tools.length > 0 || timeline.length > 0) && (
-                <div className={styles.metaLeftBottom}>
-                  {tools.length > 0 && (
-                    <div className={styles.metaBlock}>
-                      <span className={styles.metaLabel}>Tools</span>
-                      {tools.map((t, i) => (
-                        <span key={i} className={styles.metaValue}>{t}</span>
-                      ))}
-                    </div>
-                  )}
-                  {timeline.length > 0 && (
-                    <div className={styles.metaBlock}>
-                      <span className={styles.metaLabel}>Timeline</span>
-                      {timeline.map((t, i) => (
-                        <span key={i} className={styles.metaValue}>{t}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Row 2 — right: Context */}
-              {context.length > 0 && (
-                <div className={`${styles.metaBlock} ${styles.metaBlockContext}`}>
-                  <span className={styles.metaLabel}>Context</span>
-                  {context.map((p, i) => (
-                    <RichPara key={i} content={p} className={styles.metaBody} />
-                  ))}
-                </div>
-              )}
-
-              {/* Row 3 — right: CTAs */}
-              {(ctaLabel || ctaSecondaryLabel) && (
-                <div className={styles.ctaGroup}>
-                  {ctaLabel && (
-                    <a
-                      href={ctaHref}
-                      className={styles.ctaBtn}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {ctaLabel}
-                      <ArrowUpRight />
-                    </a>
-                  )}
-                  {ctaSecondaryLabel && (
-                    <a
-                      href={ctaSecondaryHref}
-                      className={styles.ctaBtn}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {ctaSecondaryLabel}
-                      <ArrowUpRight />
-                    </a>
-                  )}
-                </div>
-              )}
+                                  ? <strong key={j}>{seg.text}</strong>
+                                  : <span key={j}>{seg.text}</span>
+                            )}
+                          </p>
+                        ))
+                      : <p className={styles.metaBody}>
+                          {Array.isArray(description)
+                            ? description.map((seg, i) =>
+                                seg.href
+                                  ? <a key={i} href={seg.href} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>{seg.text}</a>
+                                  : seg.bold
+                                    ? <strong key={i}>{seg.text}</strong>
+                                    : <span key={i}>{seg.text}</span>
+                              )
+                            : description
+                          }
+                        </p>
+                    }
+                  </div>
+                )}
+                {context.length > 0 && (
+                  <div className={styles.metaBlock}>
+                    <span className={styles.metaLabel}>Context</span>
+                    {context.map((p, i) => (
+                      <RichPara key={i} content={p} className={styles.metaBody} />
+                    ))}
+                  </div>
+                )}
+                {(ctaLabel || ctaSecondaryLabel) && (
+                  <div className={styles.ctaGroup}>
+                    {ctaLabel && (
+                      <a href={ctaHref} className={styles.ctaBtn} target="_blank" rel="noopener noreferrer">
+                        {ctaLabel}
+                        <ArrowUpRight />
+                      </a>
+                    )}
+                    {ctaSecondaryLabel && (
+                      <a href={ctaSecondaryHref} className={styles.ctaBtn} target="_blank" rel="noopener noreferrer">
+                        {ctaSecondaryLabel}
+                        <ArrowUpRight />
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
 
             </div>
 
