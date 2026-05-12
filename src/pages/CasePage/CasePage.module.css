@@ -594,6 +594,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-xl);
+    align-items: flex-start;
   }
 
   .metaBlockDesc    { order: 1; flex: 0 0 100%; }

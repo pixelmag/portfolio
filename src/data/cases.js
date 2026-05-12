@@ -188,7 +188,7 @@ export const cases = {
         title: 'My role',
         body: [
           'I worked as the generalist layer of the design team alongside Elke, the lead designer. The dynamic was genuinely collaborative — weekly syncs, constant communication in Slack, and a working relationship where I could question direction, not just execution. That kind of fluid communication extended across every area I touched: marketing, development, and product worked as one connected loop rather than separate handoffs.',
-          'In practice, my scope covered four areas simultaneously:',
+          'In practice, my scope covered several areas simultaneously:',
         ],
         checkList: [
           [
@@ -212,7 +212,7 @@ export const cases = {
             { text: ' — Built and maintained the component library used by both Throne and Listful, keeping it updated as the products evolved and ensuring the development team had a reliable, documented source of truth.' },
           ],
           [
-            { text: 'Side designer for the marketing team', bold: true },
+            { text: 'Sole designer for the marketing team', bold: true },
             { text: ' — Handled all design requests from marketing across both products — social posts, banners, campaign assets, flyers, and motion — while keeping visual consistency with the product and brand.' },
           ],
           [
