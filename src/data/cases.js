@@ -44,6 +44,7 @@ import petlyImg2 from '../assets/petly/img-2.png'
 import petlyImg3 from '../assets/petly/img-3.png'
 import petlyImg4 from '../assets/petly/img-4.png'
 import petlyImg5 from '../assets/petly/img-5.png'
+import petlyCheck from '../assets/petly/check.svg'
 
 export const cases = {
   esphera: {
@@ -474,6 +475,7 @@ export const cases = {
       'My work included designing illustrations for key product features such as dental grading and body condition scoring, helping translate complex veterinary information into clear and approachable visuals. I also created illustrations for empty states, improving usability and guiding users through different scenarios within the app.',
       'In addition, I worked on mobile preview screens for iOS and Android, as well as visual support for landing pages, ensuring consistency across product and marketing touchpoints.',
     ],
+    checkIcon: petlyCheck,
     ctaLabel: 'Visit Petly',
     ctaHref: 'https://petfolk.com/',
     sections: [
