@@ -336,62 +336,51 @@ export const cases = {
     sections: [
       { imageBlock: true, imageSrc: unboundImg1 },
       {
-        title: 'Process',
+        title: 'The Problem',
         body: [
-          'The starting point was a deep dive into the existing experience, identifying friction points that were impacting both conversion and user engagement.',
-          'From there, I focused on redesigning key moments in the journey — especially around debt management and payment flows — simplifying complex interactions and making next steps clearer and more actionable.',
-          'I also restructured the information architecture to better communicate value, helping users understand their options and feel more in control of their progress.',
-          'Throughout the process, I collaborated across teams to ensure the solutions were feasible, aligned with business goals, and delivered a more intuitive and trustworthy experience.',
+          'Unbound had a trust problem. Mixpanel analytics revealed that users were dropping off not because the product lacked value — but because the experience wasn\'t communicating credibility. Visual noise, competing CTAs, absent information hierarchy, and unclear paths to action were eroding user confidence before they ever reached a key decision point.',
+          'The goal was a full product redesign: rebuild the experience from the ground up to feel transparent, empowering, and trustworthy — while making every key action obvious and accessible.',
+        ],
+      },
+      {
+        title: 'My process',
+        body: [
+          'I started with a UX audit mapping exactly where users were losing confidence and abandoning flows. The analytics confirmed what the audit surfaced: the product was creating anxiety instead of reducing it, which is the opposite of what a debt management tool needs to do.',
+          'From there I owned the full redesign end-to-end as sole designer: information architecture, user flows, UI, gamification strategy, design system, and illustration direction — all proposed, defined, and executed by me, validated in collaboration with the client and development team at each stage.',
         ],
         steps: [
-          { number: '1', title: 'Research &\nUnderstanding', body: 'A UX audit and review of platform analytics helped identify core friction points and improvement opportunities.' },
-          { number: '2', title: 'Ideation &\nDefinition', body: 'Strategic flow redesigns and a gamification strategy were defined to create a more engaging experience.' },
-          { number: '3', title: 'Prototyping &\nValidation', body: 'Ideas were translated into a more modern UI, exploring animations to bring the experience to life.' },
-          { number: '4', title: 'Implementation &\nLearning', body: 'A new design system was built from scratch, with clear development documentation and guidelines.' },
+          { number: '1', title: 'Research &\nUnderstanding', body: 'By a UX audit, the review of platform analytics we were able to identify core friction points and improvement opportunities.' },
+          { number: '2', title: 'Ideation &\nDefinition', body: 'We brainstormed and defined strategic flows redesigns and a gamification strategy that created a more engaging experience.' },
+          { number: '3', title: 'Prototyping &\nValidation', body: 'We translated the ideas into a more modern, UI and explored with animations to bring the experience to life.' },
+          { number: '4', title: 'Implementation &\nLearning', body: 'We built a new design system from scratch, with clear development documentation and guidelines.' },
         ],
       },
       { imageBlock: true, imageSrc: unboundImg2, imageBg: '#FFFFFF', imageFit: 'contain' },
       {
-        title: 'Decisions based on analytics',
-        body: [
-          'We leveraged client analytics on platform usage to analyze how users interacted with the product. Using AI tools, we were able to uncover behavioral patterns, identify friction points, and accelerate the insight-gathering process to inform design decisions.',
-        ],
+        title: 'Key decisions',
         checkList: [
-          'Identified drop-off instances',
-          'Mapped behavior trends to refine navigation and content hierarchy.',
-          'Accelerated insights through automated analysis.',
+          [{ text: 'Trust as the design principle', bold: true }, { text: '\nEvery decision — hierarchy, color, copy tone, interaction patterns — was evaluated against one question: ' }, { text: 'does this make the user feel more in control, or less?', bold: true }, { text: ' Eliminating competing CTAs and establishing a clear information hierarchy were the two structural fixes that had the most immediate impact on legibility.' }],
+          [{ text: 'Gamification system', bold: true }, { text: '\nProposed and designed a progression-based system to keep users motivated through what is inherently a stressful process — debt repayment. The goal was to make progress visible and rewarding at every step, turning a passive experience into one with a sense of momentum.' }],
+          [{ text: 'Design system from scratch', bold: true }, { text: '\nBuilt a fully tokenized, scalable system ' }, { text: '(atoms → molecules → organisms)', bold: true }, { text: ' that gave the development team a reliable foundation and made future iteration significantly faster. Also expanded the illustration library ' }, { text: 'using Gemini to generate new visuals cohesive with the refreshed identity', bold: true }, { text: ' — keeping the system consistent without the cost of custom illustration for every new asset.' }],
+          [{ text: 'AI-assisted insight acceleration', bold: true }, { text: '\nUsed Gemini alongside Mixpanel data to identify behavioral patterns faster, compressing the insight-gathering phase and allowing more time for design iteration.' }],
         ],
       },
-      { imageBlock: true, imageSrc: unboundImg3, imageBg: '#F4F5F7' },
+      { imageBlock: true, imageSrc: unboundImg3 },
       {
-        title: 'Screen redesigns',
-        body: [
-          'After a deep analysis of the design in place and the shared analytics of the platform, we focused on creating new user flows with less friction and a clearer outcome that helped users stay motivated and in track with their payment plan.',
-        ],
+        title: 'Results',
         checkList: [
-          'Overall UI refresh',
-          'Gamification and custom animations',
-          'Clear paths to action in all sections',
+          'Full product redesign delivered in 9 months — flows, UI, gamification, and design system',
+          'The quality of the work directly led to multiple additional SOWs from the client: a separate accessibility engagement for their web and platform, continued work on the gamification system, and a web redesign project handled by another team — all stemming from the same initial engagement',
+          'The platform went from feeling untrustworthy and unclear to a cohesive, credible experience aligned with Unbound\'s mission of making debt resolution less stressful',
         ],
       },
       { imageBlock: true, imageSrc: unboundImg4 },
       {
-        title: 'Design System',
+        title: 'What I learned',
         body: [
-          'Due to the magnitude of the redesign, a new design system was created from scratch, following best practices and allowing for future iteration. We acquired a base illustration library and expanded it by leveraging AI to generate new, cohesive visuals aligned with the refreshed identity.',
-        ],
-        checkList: [
-          'Tokenized system',
-          'Scalable construction (Atoms/Molecules/Organisms)',
-          'AI-assisted illustration expansion and system organization',
-        ],
-      },
-      {
-        title: 'Outcome',
-        body: [
-          'The redesign resulted in a clearer, more intuitive product experience, reducing friction across key user journeys and improving overall usability.',
-          'By simplifying flows and better communicating value, the platform was able to create a more engaging experience, supporting higher conversion rates and stronger user retention.',
-          'It was especially meaningful to contribute to a product focused on making financial processes less stressful and more empowering for users.',
+          [{ text: 'Designing for trust in a high-stakes context taught me that ' }, { text: 'clarity is a form of empathy', bold: true }, { text: '. Every unnecessary element, every competing action, every unclear label is a small tax on the user\'s confidence — and removing that tax was the core design job here.' }],
+          [{ text: 'By simplifying flows and better communicating value, the platform became more engaging and more aligned with what Unbound set out to do: ' }, { text: 'make financial processes less stressful and more empowering for the people going through them', bold: true }, { text: '. It was especially meaningful to contribute to a product with that kind of purpose.' }],
+          [{ text: 'I also learned that the best signal of successful work in a consulting context isn\'t what the client says at the end of a project — ' }, { text: 'it\'s whether they come back', bold: true }, { text: '.' }],
         ],
       },
     ],
