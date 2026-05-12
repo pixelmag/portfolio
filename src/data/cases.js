@@ -1,3 +1,5 @@
+import throneCheckPurple from '../assets/throne/check-purple.svg'
+import throneCheckPink from '../assets/throne/check-pink.svg'
 import throneImg1 from '../assets/cases/throne/img-1.png'
 import throneImg2 from '../assets/cases/throne/img-2.png'
 import throneImg3 from '../assets/cases/throne/img-3.png'
@@ -193,6 +195,8 @@ export const cases = {
           'I worked as the generalist layer of the design team alongside Elke, the lead designer. The dynamic was genuinely collaborative — weekly syncs, constant communication in Slack, and a working relationship where I could question direction, not just execution. That kind of fluid communication extended across every area I touched: marketing, development, and product worked as one connected loop rather than separate handoffs.',
           'In practice, my scope covered several areas simultaneously:',
         ],
+        checkIcon: throneCheckPurple,
+        checkBg: '#EFEFFF',
         checkList: [
           [
             { text: 'Product support on Throne', bold: true },
@@ -234,6 +238,8 @@ export const cases = {
       { imageBlock: true, imageSrc: throneImg7, imageBg: 'transparent' },
       {
         title: 'Results',
+        checkIcon: throneCheckPink,
+        checkBg: '#FFEEF0',
         checkList: [
           'Two products maintained at production quality simultaneously across product and marketing.',
           'Design QA process established with the development team, reducing implementation gaps between Figma specs and shipped product.',
