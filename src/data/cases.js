@@ -27,6 +27,7 @@ import unboundImg4 from '../assets/unbound/img-4.png'
 import unboundCheck from '../assets/unbound/check.svg'
 
 import royoVideo  from '../assets/royo/video.mov'
+import royoCheck  from '../assets/royo/check.svg'
 import royoImg2   from '../assets/royo/img-2.png'
 import royoImg3   from '../assets/royo/img-3.png'
 import royoImg4   from '../assets/royo/img-4.png'
@@ -392,6 +393,7 @@ export const cases = {
     role: ['Product Designer'],
     tools: ['Runware', 'Figma', 'Tactic'],
     timeline: ['6 Months'],
+    checkIcon: royoCheck,
     description: [
       { text: 'Royo', href: 'https://www.royo.ai' },
       { text: ' is an educational platform designed to support schools and institutions through digital tools that improve accessibility, usability, and overall learning experiences.' },

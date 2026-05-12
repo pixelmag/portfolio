@@ -85,7 +85,7 @@ export default function CasePage() {
   const openLightbox = useCallback((src) => setLightboxSrc(src), [])
   const closeLightbox = useCallback(() => setLightboxSrc(null), [])
   const isGreen = caseData?.theme === 'green'
-  const checkIcon = caseCheckIcons[slug] || defaultCheckIcon
+  const checkIcon = caseData?.checkIcon || caseCheckIcons[slug] || defaultCheckIcon
 
   if (!caseData) {
     return (
