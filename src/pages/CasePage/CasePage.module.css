@@ -366,8 +366,13 @@
 
 .checkItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+}
+
+.checkItem strong {
+  display: block;
+  margin-bottom: 2px;
 }
 
 .checkIconWrapper {
