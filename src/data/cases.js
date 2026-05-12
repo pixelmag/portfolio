@@ -406,63 +406,55 @@ export const cases = {
     sections: [
       { videoBlock: true, videoSrc: royoVideo },
       {
-        title: 'Process',
-        callout: 'How we built the new features?',
+        title: 'The problem',
         body: [
-          'I worked closely with product and development teams to understand the existing MVP, identify usability issues, and define opportunities for improvement.',
-          'A key focus was redesigning sign-up and onboarding flows to meet regulatory requirements while keeping the experience simple and user-friendly.',
-          'At the same time, I collaborated on the definition and design of features that would support a scalable business model, ensuring the product could grow sustainably while maintaining a consistent user experience.',
-          'Throughout the process, I balanced user needs, business goals, and technical constraints to deliver solutions that were both practical and effective.',
+          'Royo had a functional MVP already being tested with select institutions — but with a new school year approaching, "functional" wasn\'t enough.',
+          'The product needed to be launch-ready: compliant with child safety regulations, equipped with a monetization model, optimized for mobile, and polished enough to convert institutions that were evaluating it for real classroom use.',
+          'The challenge was doing all of that without breaking what was already working.',
         ],
         steps: [
-          { number: '1', title: 'Research & Understanding', body: 'Led user interviews and competitor research with the Product Manager to identify posible solutions to the identified flows.' },
+          { number: '1', title: 'Research &\nUnderstanding', body: 'Led user interviews and competitor research with the Product Manager to identify possible solutions to the identified flows.' },
           { number: '2', title: 'Ideation &\nDefinition', body: 'Mapped user flows and edge cases for each new feature, defining key steps and structure for each screen.' },
-          { number: '3', title: 'Prototyping & Validation', body: 'Created iterative high fidelity wireframes in Figma, quickly testing them with stakeholders.' },
-          { number: '4', title: 'Implementation & Learning', body: 'Updated and enhanced the existing design system to ensure visual consistency and scalability.' },
+          { number: '3', title: 'Prototyping &\nValidation', body: 'Created iterative high fidelity wireframes in Figma, quickly testing them with stakeholders.' },
+          { number: '4', title: 'Implementation &\nLearning', body: 'Updated and enhanced the existing design system to ensure visual consistency and scalability.' },
+        ],
+      },
+      {
+        title: 'My process',
+        body: [
+          'I worked alongside a PM and development teams to understand the existing MVP, conducting user interviews with teachers to understand where the existing experience created friction and where the product needed to grow. Two interviews sounds like a small sample — but in an institutional context where teachers are the primary gatekeepers of student adoption, their perspective was the most direct signal available.',
+          'From there I mapped flows and edge cases for every new feature, updated and extended the existing design system for consistency and scalability, and used Runware for AI-assisted image generation to maintain visual quality without slowing down iteration.',
         ],
       },
       { imageBlock: true, imageSrc: royoImg2 },
       {
-        title: 'Pricing and subscriptions',
+        title: 'Key decisions',
         body: [
           'Once the business model was defined, we created a pricing page for the website and a subscription flow within the platform that clearly communicated user status, reducing friction and ensuring a smoother experience throughout the school year.',
         ],
         checkList: [
-          'AI copy iterations to find the right tone and accuracy',
-          'Competitors benchmark for showcasing pricing efficiently',
-          'Flexible conversion flows',
+          [{ text: 'Unified free trial across all plans', bold: true }, { text: '\nThe original pricing model allowed users to start a free trial on any plan — which meant someone could trial the most expensive tier and then downgrade, creating a conversion problem. I ' }, { text: 'proposed and defined a single free trial entry point regardless of plan', bold: true }, { text: ', simplifying the decision and reducing drop-off at the conversion moment. The pricing page is live with this model.' }],
+          [{ text: 'Compliant sign-up flow', bold: true }, { text: '\nRedesigned the sign-up and onboarding to meet child safety requirements — security codes, strong password enforcement, a clear three-step structure — while keeping the experience simple enough for young learners and their parents to complete without friction.' }],
+          [{ text: 'AI experience for children', bold: true }, { text: '\nDesigned conversational flows and interaction patterns appropriate for young learners — balancing educational engagement with the tone and safety guardrails the audience required.' }],
+          [{ text: 'Mobile optimization', bold: true }, { text: '\nSince not all students have access to tablets at home, I designed a fully optimized mobile version of the student experience — researching voice interaction tools for mobile AI, redistributing elements for small screens, and building scalable components that preserved the core experience across devices.' }],
         ],
       },
       { imageBlock: true, imageSrc: royoImg3 },
-      {
-        title: 'Compliant AI experience',
-        body: [
-          'We focused on making sure the new and existing features provided an AI experience that feels intuitive, safe, and engaging for young learners. The goal was to balance educational value with playfulness, while ensuring full compliance with child protection and privacy standards.',
-        ],
-        checkList: [
-          'Age-appropriate conversational flows and tone',
-          'Ensured compliance with child safety guidelines.',
-        ],
-      },
       { imageBlock: true, imageSrc: royoImg4 },
       {
-        title: 'Mobile optimization',
-        body: [
-          "Since children needed to practice reading at home and not all might have access to tablets, we designed a mobile-friendly version of the student experience that preserved all core functionality while maintaining the platform's engaging and seamless experience.",
-        ],
+        title: 'Results',
         checkList: [
-          'Researched AI tools with voice interaction for mobile apps',
-          'Optimized element distribution for small screens',
-          'Creation of scalable components',
+          'Product launched on schedule ahead of the new school year',
+          'Pricing page live with the unified free trial model',
+          'After the design engagement ended, the client continued working exclusively with the Qubika development team — a signal that the design foundation was solid enough to build on without further design support',
         ],
       },
       { imageBlock: true, imageSrc: royoImg5 },
       {
-        title: 'Outcome',
+        title: 'What I learned',
         body: [
-          'The improvements led to a more polished and cohesive product experience, better aligned with the needs of both institutions and end users.',
-          'By simplifying key flows and supporting the definition of scalable features, the platform was better prepared for launch, with a stronger foundation for growth and long-term adoption.',
-          'It was especially meaningful to contribute to a product focused on improving reading development for children, supporting students, teachers and parents through a more accessible and thoughtful experience.',
+          'Designing for children in an institutional context means every decision has two audiences: the student who uses it, and the teacher or parent who has to trust it enough to allow it. That double accountability shapes everything — from tone of voice to how safety features are surfaced — and it pushed me to think more carefully about how trust is built at different levels of a product, not just at the user level.',
+          'It was especially meaningful to contribute to a product focused on reading development — the kind of foundational skill that shapes everything that comes after it.',
         ],
       },
     ],
